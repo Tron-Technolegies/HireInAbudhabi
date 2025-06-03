@@ -11,13 +11,13 @@ import {
 import { motion } from "framer-motion";
 
 const industryIcons = [
-  <Coffee className="w-8 h-8 text-white" />,
-  <Home className="w-8 h-8 text-white" />,
-  <ShoppingBag className="w-8 h-8 text-white" />,
-  <Activity className="w-8 h-8 text-white" />,
-  <Zap className="w-8 h-8 text-white" />,
-  <Music className="w-8 h-8 text-white" />,
-  <BookOpen className="w-8 h-8 text-white" />,
+  <Coffee className="w-8 h-8 text-white stroke-[1.5]" />,
+  <Home className="w-8 h-8 text-white stroke-[1.5]" />,
+  <ShoppingBag className="w-8 h-8 text-white stroke-[1.5]" />,
+  <Activity className="w-8 h-8 text-white stroke-[1.5]" />,
+  <Zap className="w-8 h-8 text-white stroke-[1.5]" />,
+  <Music className="w-8 h-8 text-white stroke-[1.5]" />,
+  <BookOpen className="w-8 h-8 text-white stroke-[1.5]" />,
 ];
 
 const industries = [
@@ -94,17 +94,17 @@ export default function Industries() {
           {industries.map((industry, id) => (
             <div
               key={id}
-              className="flex-shrink-0 w-64 snap-center bg-gray-800 rounded-xl p-6 shadow-lg"
+              className="flex-shrink-0 w-64 snap-center bg-gray-800 rounded-xl p-6 shadow-lg flex flex-col items-center justify-start h-62"
             >
               <div
-                className={`w-14 h-14 flex items-center justify-center rounded-full mb-5 ${colors[id]}`}
+                className={`w-14 h-14 flex items-center justify-center rounded-full mb-4 ${colors[id]}`}
               >
                 {industryIcons[id]}
               </div>
-              <h3 className="text-white text-xl font-semibold mb-2">
+              <h3 className="text-white text-center text-lg font-semibold mb-2">
                 {industry}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-400 text-sm text-center leading-relaxed">
                 Expert marketing solutions tailored for {industry.toLowerCase()}
                 .
               </p>
