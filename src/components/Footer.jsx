@@ -109,7 +109,7 @@ export default function Footer() {
                   <img
                     src={social.icon}
                     alt=""
-                    className="w-5 h-5 sm:w-6 sm:h-6"
+                    className="w-7 h-7 sm:w-7 sm:h-7"
                   />
                 </a>
               ))}
