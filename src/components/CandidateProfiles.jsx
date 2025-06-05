@@ -96,15 +96,6 @@ export default function CandidateProfiles() {
           <p className="text-gray-600 mt-2">
             Pre-vetted professionals ready to grow your business in Abu Dhabi
           </p>
-
-          {/* <input
-            type="text"
-            placeholder="Search Here"
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-            className="mt-6 w-full mb-5 max-w-md mx-auto border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-            aria-label="Search candidates"
-          /> */}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 mt-20">
@@ -193,11 +184,12 @@ export default function CandidateProfiles() {
               href={`https://wa.me/971568145866?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition"
+              className="relative inline-flex items-center justify-center gap-3 px-6 py-3 text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105 overflow-hidden"
               aria-label={`Hire ${selectedCandidate.name} on WhatsApp`}
             >
-              <FaWhatsapp className="mr-3 text-2xl" />
-              Hire {selectedCandidate.name}
+              <div className="absolute inset-0 bg-green-400 rounded-full opacity-0 hover:opacity-50 transition-opacity duration-300 transform scale-0 hover:scale-150 origin-center"></div>
+              <FaWhatsapp className="text-lg z-10" />
+              <span className="z-10">Hire {selectedCandidate.name}</span>
             </a>
           </div>
         )}
