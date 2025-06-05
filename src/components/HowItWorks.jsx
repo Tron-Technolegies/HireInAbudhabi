@@ -115,7 +115,7 @@ export default function HowItWorks() {
           className="mt-20"
         >
           <a
-            href="https://wa.me/919633464765"
+            href="https://wa.me/971568145866?text=Hi%2C%20I'm%20looking%20for%20help%20with%20%5BSMM%20%2F%20SEO%20%2F%20Ads%20%2F%20Content%5D.%20Can%20you%20assist%3F"
             target="_blank"
             rel="noopener noreferrer"
             className="relative inline-flex items-center justify-center gap-3 px-6 py-3 text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105 overflow-hidden"

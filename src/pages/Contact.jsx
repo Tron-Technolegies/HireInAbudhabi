@@ -30,14 +30,14 @@ export default function Contact() {
               href="tel:+971123456789"
               className="text-green-600 hover:underline"
             >
-              +971 123 456 789
+              +971 56 814 5866
             </a>
           </p>
         </div>
 
         {/* WhatsApp CTA */}
         <a
-          href="https://wa.me/your-number"
+          href="http://Wa.me/971568145866"
           className="mt-8 inline-block bg-green-500 text-white px-6 py-3 rounded-md shadow-lg hover:bg-green-600 transition duration-300"
         >
           Message Us Now – Chat on WhatsApp

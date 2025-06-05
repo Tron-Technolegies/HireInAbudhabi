@@ -67,7 +67,7 @@ export default function Services() {
   const [selectedService, setSelectedService] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const phoneNumber = "919633464765";
+  const phoneNumber = "+971568145866";
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 1000); // Simulate loading

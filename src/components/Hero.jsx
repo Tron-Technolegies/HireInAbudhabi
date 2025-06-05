@@ -38,7 +38,7 @@ export default function Hero() {
 
           <div className="flex justify-center lg:justify-start">
             <a
-              href="https://wa.me/919633464765"
+              href="https://wa.me/971568145866"
               target="_blank"
               rel="noopener noreferrer"
               className="relative inline-flex items-center justify-center gap-3 px-6 py-3 text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105 overflow-hidden"

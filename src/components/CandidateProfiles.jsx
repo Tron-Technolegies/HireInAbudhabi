@@ -116,17 +116,20 @@ export default function CandidateProfiles() {
             filteredCandidates.map((candidate) => (
               <article
                 key={candidate.id}
-                className={`relative bg-white rounded-2xl shadow-md border border-gray-200 p-6 flex flex-col items-center text-center transition hover:shadow-lg ${
+                className={`relative bg-white rounded-2xl shadow-md border border-gray-200 pt-20 pb-6 px-6 flex flex-col items-center text-center transition hover:shadow-lg ${
                   selectedProfile === candidate.id
                     ? "ring-2 ring-green-400"
                     : ""
                 }`}
               >
-                <img
-                  src={candidate.image}
-                  alt={candidate.name}
-                  className="w-28 h-28 rounded-full object-cover border-2 border-white shadow -mt-16"
-                />
+                <div className="absolute -top-14">
+                  <img
+                    src={candidate.image}
+                    alt={candidate.name}
+                    className="w-28 h-28 rounded-full object-cover border-4 border-white shadow"
+                  />
+                </div>
+
                 <h3 className="text-xl font-semibold text-gray-800 mt-4">
                   {candidate.name}
                 </h3>
@@ -187,7 +190,7 @@ export default function CandidateProfiles() {
         {selectedProfile && (
           <div className="mt-12 text-center">
             <a
-              href={`https://wa.me/+919633464765?text=${whatsappMessage}`}
+              href={`https://wa.me/971568145866?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition"

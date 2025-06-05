@@ -14,7 +14,7 @@ export default function Footer() {
     { name: "Services", path: "/services" },
     { name: "Industries", path: "/industries" },
     { name: "Testimonials", path: "/testimonials" },
-    { name: "Contact", path: "https://wa.me/919633464765", external: true },
+    { name: "Contact", path: "http://Wa.me/971568145866", external: true },
   ];
 
   const socialLinks = [
@@ -74,7 +74,7 @@ export default function Footer() {
                 <div className="flex items-center">
                   <Mail className="w-5 h-5 mr-2 text-green-600 flex-shrink-0" />
                   <a
-                    href="mailto:info@hireinabudhabi.com"
+                    href="mailto:hireinabudhabi@gmail.com"
                     className="hover:text-green-600 transition-colors duration-200 text-gray-600"
                   >
                     hireinabudhabi@gmail.com
@@ -88,7 +88,7 @@ export default function Footer() {
                     href="tel:+971123456789"
                     className="hover:text-green-600 transition-colors duration-200 text-gray-600"
                   >
-                    +971 000000000
+                    +971 56 814 5866
                   </a>
                 </div>
               </li>

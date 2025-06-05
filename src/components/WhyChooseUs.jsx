@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
     },
   };
 
-  const phoneNumber = "+919633464765";
+  const phoneNumber = "+971568145866";
   const preFilledMessage =
     "Hi, I'm looking for help with [SMM / SEO / Ads / Content]. Can you assist?";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
