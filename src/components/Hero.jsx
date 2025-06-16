@@ -36,7 +36,10 @@ export default function Hero() {
             creators—all pre-vetted and ready to grow your business.
           </p>
 
-          <div className="flex justify-center lg:justify-start">
+          <button
+            title="Contact-Now"
+            className="flex justify-center lg:justify-start"
+          >
             <a
               href="https://wa.me/971568145866"
               target="_blank"
@@ -47,7 +50,7 @@ export default function Hero() {
               <FaWhatsapp className="text-lg z-10" />
               <span className="z-10">Get Matched Now</span>
             </a>
-          </div>
+          </button>
         </div>
 
         <motion.div
