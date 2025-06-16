@@ -122,7 +122,7 @@ export default function HowItWorks() {
           >
             <div className="absolute inset-0 bg-green-400 rounded-full opacity-0 hover:opacity-50 transition-opacity duration-300 transform scale-0 hover:scale-150 origin-center"></div>
             <FaWhatsapp className="text-lg z-10" />
-            <span className="z-10">Let's Get Started</span>
+            <span className="z-10">Talk To An Expert</span>
           </a>
         </motion.div>
       </div>
