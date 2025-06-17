@@ -71,7 +71,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="px-4 py-2 text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105 overflow-hidden"
               >
-                Contact
+                Talk Now
               </a>
             </button>
           </nav>
