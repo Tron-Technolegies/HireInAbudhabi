@@ -24,16 +24,16 @@ export default function Hero() {
           </span> */}
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4">
-            Need a{" "}
+            Looking For Top{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
-              Marketing Expert
+              Marketing Talent
             </span>{" "}
             in Abu Dhabi?
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
-            Social media managers, ad specialists, SEO pros & content
-            creators—all pre-vetted and ready to grow your business.
+            Hire expert social media strategists, ad-managers, SEO specialists &
+            content creators, pre-qualified and ready to scale your business.
           </p>
 
           <button
@@ -48,7 +48,7 @@ export default function Hero() {
             >
               <div className="absolute inset-0 bg-green-400 rounded-full opacity-0 hover:opacity-50 transition-opacity duration-300 transform scale-0 hover:scale-150 origin-center"></div>
               <FaWhatsapp className="text-lg z-10" />
-              <span className="z-10">Talk To An Expert</span>
+              <span className="z-10">Talk To Our Specialist</span>
             </a>
           </button>
         </div>
