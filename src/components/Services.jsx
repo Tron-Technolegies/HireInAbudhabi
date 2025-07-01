@@ -11,73 +11,86 @@ import {
 import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const services = [
-  {
-    id: 1,
-    title: "Video Editors",
-    description:
-      "Professional editing for social media, ads, and long-form content.",
-    icon: <Video className="w-8 h-8 text-green-600" />,
-  },
-  {
-    id: 2,
-    title: "Graphic Designers",
-    description:
-      "Creative visuals, branding, and ad creatives that capture attention.",
-    icon: <Image className="w-8 h-8 text-green-600" />,
-  },
-  {
-    id: 3,
-    title: "Digital Marketers",
-    description:
-      "Full-funnel strategies across channels to drive growth and ROI.",
-    icon: <BarChart2 className="w-8 h-8 text-green-600" />,
-  },
-  {
-    id: 4,
-    title: "SEO Analysts",
-    description:
-      "Technical audits, keyword research, on-page and off-page optimization.",
-    icon: <Search className="w-8 h-8 text-green-600" />,
-  },
-  {
-    id: 5,
-    title: "Performance Marketers",
-    description:
-      "Data-driven ad campaigns on Google, Meta, and other networks.",
-    icon: <TrendingUp className="w-8 h-8 text-green-600" />,
-  },
-  {
-    id: 6,
-    title: "Social Media Marketers",
-    description:
-      "Content calendars, community management, and engagement boosts.",
-    icon: <Users className="w-8 h-8 text-green-600" />,
-  },
-  {
-    id: 7,
-    title: "Web Developers",
-    description:
-      "Responsive websites, landing pages, and e-commerce solutions.",
-    icon: <Code className="w-8 h-8 text-green-600" />,
-  },
-];
+// Updated service categories
+const serviceTabs = {
+  "Digital Marketing": [
+    {
+      id: 1,
+      title: "SEO Experts",
+      description: "Boost your website's visibility with proven SEO strategies.",
+      icon: <Search className="w-8 h-8 text-green-600" />,
+    },
+    {
+      id: 2,
+      title: "Social Media Managers",
+      description: "Engage your audience with planned content and strategy.",
+      icon: <Users className="w-8 h-8 text-green-600" />,
+    },
+    {
+      id: 3,
+      title: "Performance Marketers",
+      description: "Data-driven campaigns to increase your ROI.",
+      icon: <TrendingUp className="w-8 h-8 text-green-600" />,
+    },
+  ],
+  Coding: [
+    {
+      id: 4,
+      title: "Frontend Developers",
+      description: "Responsive and modern interfaces using React, Vue, or Angular.",
+      icon: <Code className="w-8 h-8 text-green-600" />,
+    },
+    {
+      id: 5,
+      title: "Backend Developers",
+      description: "Scalable APIs and systems with Node.js, Laravel, or Django.",
+      icon: <Code className="w-8 h-8 text-green-600" />,
+    },
+    {
+      id: 6,
+      title: "Fullstack Developers",
+      description: "Complete web solutions from UI to database.",
+      icon: <Code className="w-8 h-8 text-green-600" />,
+    },
+  ],
+  Multimedia: [
+    {
+      id: 7,
+      title: "Video Editors",
+      description: "Polished edits for reels, ads, and YouTube content.",
+      icon: <Video className="w-8 h-8 text-green-600" />,
+    },
+    {
+      id: 8,
+      title: "Graphic Designers",
+      description: "Branding, social posts, thumbnails & more.",
+      icon: <Image className="w-8 h-8 text-green-600" />,
+    },
+    {
+      id: 9,
+      title: "Animators",
+      description: "2D/3D animations that grab attention and tell stories.",
+      icon: <Video className="w-8 h-8 text-green-600" />,
+    },
+  ],
+};
 
 export default function Services() {
   const [selectedService, setSelectedService] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedTab, setSelectedTab] = useState("Digital Marketing");
 
   const phoneNumber = "+971568145866";
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 1000); // Simulate loading
+    const timer = setTimeout(() => setIsLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
   const getWhatsAppUrl = () => {
     if (!selectedService) return `https://wa.me/${phoneNumber}`;
-    const service = services.find((s) => s.id === selectedService);
-    const message = `Hello! I would like to hire a ${service.title}. Please provide more details.`;
+    const service = serviceTabs[selectedTab].find((s) => s.id === selectedService);
+    const message = `Hello! I would like to discuss about "${service.title}". Please provide more details.`;
     return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   };
 
@@ -95,19 +108,39 @@ export default function Services() {
             Hire For
           </span>
         </motion.h2>
+
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="text-gray-600 max-w-2xl mx-auto mb-12"
+          className="text-gray-600 max-w-2xl mx-auto mb-6"
         >
           Access top talent across multiple areas of expertise, ready to help
           your business grow.
         </motion.p>
 
+        <div className="flex justify-center gap-4 mb-10 flex-wrap">
+          {["Digital Marketing", "Coding", "Multimedia"].map((tab) => (
+            <button
+              key={tab}
+              onClick={() => {
+                setSelectedTab(tab);
+                setSelectedService(null);
+              }}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
+                selectedTab === tab
+                  ? "bg-green-600 text-white"
+                  : "bg-gray-100 text-gray-700 hover:bg-green-100"
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {isLoading
-            ? Array.from({ length: 6 }).map((_, idx) => (
+            ? Array.from({ length: 3 }).map((_, idx) => (
                 <div
                   key={idx}
                   className="animate-pulse rounded-xl border border-gray-200 p-8 flex flex-col items-center text-center"
@@ -117,7 +150,7 @@ export default function Services() {
                   <div className="w-48 h-3 bg-gray-200 rounded" />
                 </div>
               ))
-            : services.map((service, index) => (
+            : serviceTabs[selectedTab].map((service, index) => (
                 <motion.div
                   key={service.id}
                   onClick={() =>
@@ -169,13 +202,19 @@ export default function Services() {
               rel="noopener noreferrer"
               className="relative inline-flex items-center justify-center gap-3 px-6 py-3 text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105 overflow-hidden"
               aria-label={`Hire ${
-                services.find((s) => s.id === selectedService).title
+                serviceTabs[selectedTab].find((s) => s.id === selectedService)
+                  ?.title
               } via WhatsApp`}
             >
               <div className="absolute inset-0 bg-green-400 rounded-full opacity-0 hover:opacity-50 transition-opacity duration-300 transform scale-0 hover:scale-150 origin-center"></div>
               <FaWhatsapp className="text-lg z-10" />
               <span className="z-10">
-                Hire {services.find((s) => s.id === selectedService).title}
+                Hire{" "}
+                {
+                  serviceTabs[selectedTab].find(
+                    (s) => s.id === selectedService
+                  )?.title
+                }
               </span>
             </a>
           </motion.div>

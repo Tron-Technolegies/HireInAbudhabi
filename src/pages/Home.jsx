@@ -14,15 +14,17 @@ export default function Home() {
       <section id="home">
         <Hero />
       </section>
+      
       <section id="howItWorks">
         <HowItWorks />
+      </section>
+       <section id="services">
+        <Services />
       </section>
       <section>
         <WhyChooseUs />
       </section>
-      <section id="services">
-        <Services />
-      </section>
+     
       <section id="industries">
         <Industries />
       </section>
