@@ -32,8 +32,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
-            Hire expert social media strategists, ad-managers, SEO specialists &
-            content creators, pre-qualified and ready to scale your business.
+            Hire digital marketers, software developers, and multimedia designers — all pre-screened and equipped to deliver business impact.
           </p>
 
           <button
