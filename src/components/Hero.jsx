@@ -23,22 +23,21 @@ export default function Hero() {
             Expert Matching Service
           </span> */}
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4">
-            Looking For Top{" "}
+          <h1 className="text-4xl sm:text-4xl md:text-4xl font-bold leading-tight mb-4">
+            Hire vetted{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
-              Marketing Talent
+              Digital Marketing, Coding, and Multimedia
             </span>{" "}
-            in Abu Dhabi?
+            Experts in Abu Dhabi,UAE
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
-            Hire digital marketers, software developers, and multimedia designers — all pre-screened and equipped to deliver business impact.
+            From scalable code to converting campaigns and visuals that engage, We select the best
+            who transform your idea into actionable success. Build better, go faster, with trusted
+            experts .
           </p>
 
-          <button
-            title="Contact-Now"
-            className="flex justify-center lg:justify-start"
-          >
+          <button title="Contact-Now" className="flex justify-center lg:justify-start">
             <a
               href="https://wa.me/971568145866"
               target="_blank"
@@ -47,7 +46,7 @@ export default function Hero() {
             >
               <div className="absolute inset-0 bg-green-400 rounded-full opacity-0 hover:opacity-50 transition-opacity duration-300 transform scale-0 hover:scale-150 origin-center"></div>
               <FaWhatsapp className="text-lg z-10" />
-              <span className="z-10">Start Hiring with Our Help</span>
+              <span className="z-10">Hire now</span>
             </a>
           </button>
         </div>

@@ -38,9 +38,9 @@ export default function CandidateProfiles() {
       ...candidate,
       experience: "1+ years",
       location: "UAE",
-      image: `https://randomuser.me/api/portraits/${
-        index % 2 === 0 ? "men" : "women"
-      }/${40 + index}.jpg`,
+      image: `https://randomuser.me/api/portraits/${index % 2 === 0 ? "men" : "women"}/${
+        40 + index
+      }.jpg`,
       bio:
         candidate.category === "DM"
           ? "Optimized campaigns for top-tier brands."
@@ -67,13 +67,15 @@ export default function CandidateProfiles() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6">
-            Meet Our{" "}
+            Built by experts —{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
-              Talented Team
+              right here in Abu Dhabi.
             </span>
           </h2>
           <p className="text-gray-600 mt-2">
-            Experts in Digital Marketing, Coding, and Multimedia.
+            Discover the story behind HireIn — a team of experts building smarter hiring solutions{" "}
+            <br />
+            for businesses in Abu Dhabi and the UAE. Meet the minds behind the mission.
           </p>
         </div>
 
@@ -87,9 +89,7 @@ export default function CandidateProfiles() {
             return (
               <article
                 key={candidate.id}
-                onClick={() =>
-                  setSelectedProfileId(isSelected ? null : candidate.id)
-                }
+                onClick={() => setSelectedProfileId(isSelected ? null : candidate.id)}
                 className={`relative bg-white rounded-2xl shadow-md border border-gray-200 pt-20 pb-6 px-6 flex flex-col items-center text-center transition hover:shadow-lg cursor-pointer ${
                   isSelected ? "ring-2 ring-green-400" : ""
                 }`}
@@ -102,14 +102,9 @@ export default function CandidateProfiles() {
                   />
                 </div>
 
-                <h3 className="text-xl font-semibold text-gray-800 mt-4">
-                  {candidate.name}
-                </h3>
+                <h3 className="text-xl font-semibold text-gray-800 mt-4">{candidate.name}</h3>
                 <p className="text-green-600 font-medium text-sm">
-                  {candidate.role}{" "}
-                  <span className="text-gray-500">
-                    ({candidate.experience})
-                  </span>
+                  {candidate.role} <span className="text-gray-500">({candidate.experience})</span>
                 </p>
 
                 <p className="flex items-center text-gray-500 text-xs mt-1 space-x-1 justify-center">
@@ -117,14 +112,10 @@ export default function CandidateProfiles() {
                   <span>{candidate.location}</span>
                 </p>
 
-                <p className="text-sm text-gray-600 mt-3 mb-4 px-4">
-                  {candidate.bio}
-                </p>
+                <p className="text-sm text-gray-600 mt-3 mb-4 px-4">{candidate.bio}</p>
 
                 <div className="w-full">
-                  <div className="text-xs font-semibold text-gray-500 mb-1">
-                    Expertise
-                  </div>
+                  <div className="text-xs font-semibold text-gray-500 mb-1">Expertise</div>
                   <div className="flex flex-wrap justify-center gap-2">
                     {candidate.expertise.map((skill, i) => (
                       <span
