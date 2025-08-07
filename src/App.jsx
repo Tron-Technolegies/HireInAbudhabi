@@ -3,13 +3,31 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HowItWorks from "./pages/HowItWorks";
+import DigitalMarketingPage from "./pages/DigitalMarketingPage";
+import CodingPage from "./pages/CodingPage";
+import MultimediaPage from "./pages/MultimediaPage";
+import AboutUs from "./pages/AboutUs";
+// import { Route } from "lucide-react";
 
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col relative z-0">
       <Header />
       <main className="flex-grow">
-        <Home />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/how-it-works" element={<HowItWorks />} />
+            <Route path="/Digitalmarketing" element={<DigitalMarketingPage />} />
+            <Route path="/Coding" element={<CodingPage />} />
+            <Route path="/Multimedia" element={<MultimediaPage />} />
+            <Route path="/AboutUs" element={<AboutUs />} />
+          </Routes>
+        </BrowserRouter>
+
+        {/* <Home /> */}
       </main>
       <WhatsAppButton />
       <footer id="contact">
