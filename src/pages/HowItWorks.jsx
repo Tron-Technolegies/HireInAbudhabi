@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import WhyChooseInHowItWorks from "../components/Howitworks/WhyChooseInHowItWorks";
 import HowItWorksHero from "../components/Howitworks/HowItWorksHero";
 import HowItWorks from "../components/HowItWorks";
 import BottomSection from "../components/BottomSection";
 export default function HowItWorksPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Helmet>

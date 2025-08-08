@@ -27,8 +27,17 @@ export default function AboutHero() {
                 We're not a conventional BPO. We provide more intelligent, flexible hiring
                 freelance, part-time, or full-time.
               </p>
-              <button className="px-10 py-4 bg-green-600 text-white font-bold text-lg rounded-full hover:bg-gray-800 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
-                Hire Now
+              <button title="Contact-Now" className="flex justify-center lg:justify-start">
+                <a
+                  href="https://wa.me/971568145866"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative inline-flex items-center justify-center gap-3 px-6 py-3 text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105 overflow-hidden"
+                >
+                  <div className="absolute inset-0 bg-green-400 rounded-full opacity-0 hover:opacity-50 transition-opacity duration-300 transform scale-0 hover:scale-150 origin-center"></div>
+                  {/* <FaWhatsapp className="text-lg z-10" /> */}
+                  <span className="z-10">Hire now</span>
+                </a>
               </button>
             </div>
 

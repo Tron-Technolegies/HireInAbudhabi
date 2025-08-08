@@ -9,14 +9,13 @@ import DigitalMarketingPage from "./pages/DigitalMarketingPage";
 import CodingPage from "./pages/CodingPage";
 import MultimediaPage from "./pages/MultimediaPage";
 import AboutUs from "./pages/AboutUs";
-// import { Route } from "lucide-react";
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col relative z-0">
-      <Header />
-      <main className="flex-grow">
-        <BrowserRouter>
+    <BrowserRouter>
+      <div className="min-h-screen flex flex-col relative z-0">
+        <Header />
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/how-it-works" element={<HowItWorks />} />
@@ -25,14 +24,12 @@ export default function App() {
             <Route path="/Multimedia" element={<MultimediaPage />} />
             <Route path="/AboutUs" element={<AboutUs />} />
           </Routes>
-        </BrowserRouter>
-
-        {/* <Home /> */}
-      </main>
-      <WhatsAppButton />
-      <footer id="contact">
-        <Footer />
-      </footer>
-    </div>
+        </main>
+        <WhatsAppButton />
+        <footer id="contact">
+          <Footer />
+        </footer>
+      </div>
+    </BrowserRouter>
   );
 }

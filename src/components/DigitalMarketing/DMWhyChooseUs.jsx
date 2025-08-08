@@ -44,7 +44,7 @@ export default function DMWhyChooseUs() {
   return (
     <div>
       <section className="bg-green-50 py-16 px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
           Why Choose Our Digital Marketing Experts?
         </h2>
         <p className="max-w-3xl mx-auto text-lg sm:text-xl mt-6 text-gray-700 leading-relaxed">

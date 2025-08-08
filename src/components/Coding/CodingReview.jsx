@@ -12,7 +12,7 @@ export default function CodingReview() {
       position: "Operations Manager",
       review:
         "We needed a fast and responsive internal dashboard for our logistics company. The developer hired via this platform was efficient, wrote clean code, and helped optimize some backend processes. Deadlines were met without compromise on quality.",
-      author: "— Ali M., Operations Manager",
+      author: "— Ali M, Operations Manager",
     },
     {
       role: "Frontend Developer",
@@ -52,7 +52,7 @@ export default function CodingReview() {
                 hear from companies that hired top-tier developers in the UAE.
               </p>
 
-              <button className="bg-black text-white px-8 py-4 font-bold text-lg hover:bg-gray-800 transition-colors duration-300">
+              <button className="bg-black text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-800 transition-colors duration-300">
                 Browse Developers
               </button>
             </div>

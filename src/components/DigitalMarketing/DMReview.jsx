@@ -47,12 +47,11 @@ export default function DMReview() {
               </h3>
 
               <p className="text-lg md:text-xl text-black leading-relaxed">
-                Great results? It’s who you hire, not what you use. <br /> Forget the gimmicks —
-                meet the marketers who make real magic happen. See why our partners keep coming
-                back.
+                Great results? It’s who you hire, not what you use. <br /> Forget the gimmicks meet
+                the marketers who make real magic happen. See why our partners keep coming back.
               </p>
 
-              <button className="bg-black text-white px-8 py-4 font-bold text-lg hover:bg-gray-800 transition-colors duration-300">
+              <button className="bg-black rounded-full text-white px-8 py-4 font-bold text-lg hover:bg-gray-800 transition-colors duration-300">
                 Browse for Experts
               </button>
             </div>

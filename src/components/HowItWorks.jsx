@@ -301,7 +301,7 @@ export default function HowItWorks() {
             className="relative inline-flex items-center justify-center gap-3 px-6 py-3 text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105 overflow-hidden"
           >
             <div className="absolute inset-0 bg-green-400 rounded-full opacity-0 hover:opacity-50 transition-opacity duration-300 transform scale-0 hover:scale-150 origin-center"></div>
-            <FaWhatsapp className="text-lg z-10" />
+            {/* <FaWhatsapp className="text-lg z-10" /> */}
             <span className="z-10">Start Hiring with Our Help</span>
           </a>
         </motion.div>

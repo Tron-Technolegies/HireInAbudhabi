@@ -148,6 +148,7 @@
 //   );
 // }
 import React from "react";
+import { Link } from "react-router-dom";
 import { ShieldCheck, Clock, Building2, ArrowRightLeft, Globe, HelpingHand } from "lucide-react";
 
 export default function WhyChooseUs() {
@@ -218,14 +219,12 @@ export default function WhyChooseUs() {
           ))}
         </div>
 
-        {/* Link at bottom */}
         <div className="text-center mt-12">
-          <a
-            href="/how-it-works"
-            className="text-green-400 underline hover:text-green-300 transition"
-          >
-            Learn how it works →
-          </a>
+          <Link to="/how-it-works">
+            <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+              Learn how it works →
+            </button>
+          </Link>
         </div>
       </div>
     </section>

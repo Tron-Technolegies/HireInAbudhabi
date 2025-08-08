@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "../components/Hero";
 import HowItWorks from "../components/HowItWorks";
 import WhyChooseUs from "../components/WhyChooseUs";
@@ -13,6 +13,9 @@ import FAQSection from "../components/FaqSection";
 import BottomSection from "../components/BottomSection";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="flex flex-col">
       <Helmet>
