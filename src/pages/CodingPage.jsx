@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import CodingHero from "../components/Coding/CodingHero";
 import CodingReview from "../components/Coding/CodingReview";
@@ -8,6 +8,9 @@ import CodingFaq from "../components/Coding/CodingFaq";
 import CodingBottom from "../components/Coding/CodingBottom";
 
 export default function CodingPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Helmet>

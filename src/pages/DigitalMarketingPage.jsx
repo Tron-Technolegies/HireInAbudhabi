@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import DMHero from "../components/DigitalMarketing/DMHero";
 import DMExperts from "../components/DigitalMarketing/DMExperts";
@@ -9,6 +9,9 @@ import DMBottom from "../components/DigitalMarketing/DMBottom";
 import DMCandidates from "../components/DigitalMarketing/DMCandidates";
 
 export default function DigitalMarketingPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Helmet>

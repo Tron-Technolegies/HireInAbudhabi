@@ -17,7 +17,7 @@ export default function HowItWorksHero() {
       <div className="max-w-7xl mx-auto px-6 py-16">
         {/* Hero Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-8 leading-tight">
             How Hire In Abu Dhabi Works
           </h1>
         </div>
@@ -108,9 +108,11 @@ export default function HowItWorksHero() {
           <p className="text-lg text-gray-600 mb-6">
             Experience the difference of working with thoroughly vetted experts
           </p>
-          <button className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200">
-            Get Started Today
-          </button>
+          <a href="https://wa.me/971568145866" target="_blank" rel="noopener noreferrer">
+            <button className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200">
+              Get Started Today
+            </button>
+          </a>
         </div>
       </div>
     </div>

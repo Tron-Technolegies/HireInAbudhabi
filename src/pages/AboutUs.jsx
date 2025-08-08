@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import AboutHero from "../components/AboutUs/AboutHero";
 import CoreValue from "../components/AboutUs/CoreValue";
@@ -6,6 +6,9 @@ import WhatWeDo from "../components/AboutUs/WhatWeDo";
 import AboutBottom from "../components/AboutUs/AboutBottom";
 
 export default function AboutUs() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Helmet>

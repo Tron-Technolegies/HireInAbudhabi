@@ -7,22 +7,22 @@ export default function WhyChooseInHowItWorks() {
     {
       icon: Users,
       text: "Employ remote workers or local freelancers",
-      color: "from-green-500 to-emerald-500",
+      color: "from-blue-500 to-blue-500",
     },
     {
       icon: Zap,
       text: "Skip lengthy agreements",
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-500 to-blue-500",
     },
     {
       icon: TrendingUp,
       text: "Grow your team at your own pace",
-      color: "from-green-600 to-blue-500",
+      color: "from-blue-500 to-blue-500",
     },
     {
       icon: Target,
       text: "Have complete command over communication and work output",
-      color: "from-blue-600 to-green-500",
+      color: "from-blue-500 to-blue-500",
     },
   ];
 
@@ -57,14 +57,12 @@ export default function WhyChooseInHowItWorks() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-2 leading-tight">
             Why It's Better Than Conventional{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-600">
               BPO Outsourcing providers in Abu dhabi
             </span>
           </h2>
-
-          <div className="w-24 h-1 mx-auto bg-gradient-to-r from-green-500 to-blue-600 rounded-full mb-8"></div>
         </motion.div>
 
         {/* Content */}
@@ -117,9 +115,9 @@ export default function WhyChooseInHowItWorks() {
                   </div>
 
                   {/* Subtle glow effect */}
-                  <div
+                  {/* <div
                     className={`absolute -inset-0.5 bg-gradient-to-r ${feature.color} rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-300 -z-10`}
-                  ></div>
+                  ></div> */}
                 </motion.div>
               );
             })}
@@ -133,7 +131,7 @@ export default function WhyChooseInHowItWorks() {
             transition={{ duration: 0.6, delay: 0.8 }}
           >
             Whether you need remote staffing solutions or professional freelance assistance in Abu
-            Dhabi—we make it easier.
+            Dhabi we make it easier.
           </motion.p>
 
           {/* CTA Button */}

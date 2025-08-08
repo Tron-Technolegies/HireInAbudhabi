@@ -24,18 +24,16 @@ export default function DMExperts() {
 
         {/* Specialists List */}
         <div className=" p-8 rounded-3xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-2 gap-8">
             {offers.map((item, index) => (
               <div
                 key={index}
                 className="group flex items-center justify-between p-4 bg-blue-50 rounded-2xl hover:bg-blue-100 cursor-pointer transition-all duration-300 hover:shadow-lg"
               >
-                <h3 className="text-lg font-bold text-gray-900 group-hover:text-gray-800">
+                <h3 className="text-lg font-bold text-gray-900  group-hover:text-gray-800">
                   {item}
                 </h3>
-                <span className="text-gray-900 group-hover:translate-x-1 transition-transform duration-300">
-                  →
-                </span>
+                <span className="text-gray-900 group-hover:translate-x-1 transition-transform duration-300"></span>
               </div>
             ))}
           </div>

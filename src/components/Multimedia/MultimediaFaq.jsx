@@ -39,7 +39,9 @@ export default function MultimediaFaq() {
 
   return (
     <div className="bg-white text-black py-16 px-4 sm:px-10">
-      <h2 className="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
+      <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
+        Frequently Asked Questions
+      </h2>
       <div className="max-w-4xl mx-auto space-y-4">
         {multimediaFaqData.map((faq, index) => (
           <div key={index} className="border border-green-200 rounded-lg bg-white shadow-sm">

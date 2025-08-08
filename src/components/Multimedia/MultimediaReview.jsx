@@ -51,7 +51,7 @@ export default function MultimediaReview() {
                 are reshaping content in the UAE.
               </p>
 
-              <button className="bg-black text-white px-8 py-4 font-bold text-lg hover:bg-gray-800 transition-colors duration-300">
+              <button className="bg-black text-white px-8 py-4  text-lg hover:bg-gray-800 transition-colors rounded-full duration-300">
                 Browse Multimedia Talent
               </button>
             </div>
