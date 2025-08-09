@@ -15,6 +15,8 @@ export default function Header() {
     { name: "About Us", path: "/AboutUs" },
   ];
 
+  const services = ["Digitalmarketing", "Coding", "Multimedia"];
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 900);
@@ -53,7 +55,7 @@ export default function Header() {
               Home
             </Link>
 
-            {/* Services Second */}
+            {/* Services Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
@@ -64,7 +66,7 @@ export default function Header() {
 
               {servicesOpen && (
                 <div className="absolute left-0 mt-2 w-52 bg-white rounded-md shadow-md z-50">
-                  {["Digital Marketing", "Coding", "Multimedia"].map((service) => (
+                  {services.map((service) => (
                     <Link
                       key={service}
                       to={`/${service}`}
@@ -75,7 +77,7 @@ export default function Header() {
                       }`}
                       onClick={() => setServicesOpen(false)}
                     >
-                      {service.replace(/([A-Z])/g, " $1").trim()}
+                      {service === "Digitalmarketing" ? "Digital Marketing" : service}
                     </Link>
                   ))}
                 </div>
@@ -139,7 +141,7 @@ export default function Header() {
               </button>
             </div>
             <ul className="space-y-4">
-              {/* Home First */}
+              {/* Home */}
               <li>
                 <Link
                   to="/"
@@ -152,14 +154,14 @@ export default function Header() {
                 </Link>
               </li>
 
-              {/* Services Second */}
+              {/* Services */}
               <li>
                 <details className="group">
                   <summary className="flex justify-between items-center px-4 py-2 font-semibold text-lg cursor-pointer hover:bg-green-100 rounded-md">
                     Services <ChevronDown className="w-4 h-4" />
                   </summary>
                   <div className="pl-4 mt-1 space-y-1">
-                    {["Digital Marketing", "Coding", "Multimedia"].map((service) => (
+                    {services.map((service) => (
                       <Link
                         key={service}
                         to={`/${service}`}
@@ -168,7 +170,7 @@ export default function Header() {
                           location.pathname === `/${service}` ? "bg-green-100 text-green-600" : ""
                         }`}
                       >
-                        {service.replace(/([A-Z])/g, " $1").trim()}
+                        {service === "Digitalmarketing" ? "Digital Marketing" : service}
                       </Link>
                     ))}
                   </div>
