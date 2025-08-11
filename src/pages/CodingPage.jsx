@@ -19,6 +19,7 @@ export default function CodingPage() {
           name="description"
           content="Finding it hard to get skilled coders in Abu Dhabi? We connect you with the best 1% of coders, who are willing to create and grow your tech at record speed"
         />
+        <link rel="canonical" href="https://hireinabudhabi.com/Coding" />
       </Helmet>
 
       <section>

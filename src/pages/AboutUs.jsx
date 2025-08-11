@@ -15,8 +15,9 @@ export default function AboutUs() {
         <title>Outsourcing & Remote Staffing Solutions in Abu Dhabi | Hire Experts UAE</title>
         <meta
           name="description"
-          content="Hire skilled coding, multimedia, and graphic design experts through flexible outsourcing and remote staffing solutions. Serving businesses across Abu Dhabi and the UAE"
+          content="Hire skilled coding, multimedia, and graphic design experts in Abu Dhabi & UAE. Flexible outsourcing and remote staffing start hiring today."
         />
+        <link rel="canonical" href="https://hireinabudhabi.com/AboutUs" />
       </Helmet>
       <AboutHero />
       <CoreValue />

@@ -22,7 +22,7 @@ export default function Home() {
         <title>Hire Vetted Marketing, Coding & Multimedia Experts in Abu Dhabi, UAE</title>
         <meta
           name="description"
-          content="Connect with top digital marketing, coding, and multimedia experts in Abu Dhabi. Hire freelance, part-time, or full-time talent—fully vetted and ready to deliver results."
+          content="Hire top digital marketing, coding, and multimedia experts in Abu Dhabi. Find vetted freelance, part-time, or full-time talent ready to deliver results today."
         />
         <link rel="canonical" href="https://hireinabudhabi.com/" />
       </Helmet>
