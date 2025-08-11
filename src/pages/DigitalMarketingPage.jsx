@@ -20,6 +20,7 @@ export default function DigitalMarketingPage() {
           name="description"
           content="Connect with vetted digital marketing experts in abu dhabi who turn strategy into real growth. SEO, PPC & social media strategies. Get results today"
         />
+        <link rel="canonical" href="https://hireinabudhabi.com/Digitalmarketing" />
       </Helmet>
       <section>
         <DMHero />

@@ -18,6 +18,7 @@ export default function MultimediaPage() {
           name="description"
           content="Hire expert graphic designers and video editors in Abu Dhabi for branding, social media, ads, and more. Vetted creatives ready to bring your vision to life."
         />
+        <link rel="canonical" href="https://hireinabudhabi.com/Multimedia" />
       </Helmet>
       <MultimediaHero />
       <MultimediaCandidates />

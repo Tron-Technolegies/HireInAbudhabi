@@ -11,11 +11,12 @@ export default function HowItWorksPage() {
   return (
     <div>
       <Helmet>
-        <title>How It Works – Hire Freelance, Part-Time & Full-Time Experts in Abu Dhabi</title>
+        <title>How It Works Hire Freelance, Part-Time & Full-Time Experts in Abu Dhabi</title>
         <meta
           name="description"
-          content="Learn how Hire In Abu Dhabi helps you hire vetted digital marketing, coding, and multimedia experts—faster. Freelance, part-time, or full-time hiring made simple."
+          content="Hire vetted digital marketing, coding, and multimedia experts in Abu Dhabi  fast. Freelance, part-time, or full-time hiring is made simple."
         />
+        <link rel="canonical" href="https://hireinabudhabi.com/how-it-works" />
       </Helmet>
 
       <section>
