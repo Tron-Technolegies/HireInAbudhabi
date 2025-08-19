@@ -9,6 +9,8 @@ import DigitalMarketingPage from "./pages/DigitalMarketingPage";
 import CodingPage from "./pages/CodingPage";
 import MultimediaPage from "./pages/MultimediaPage";
 import AboutUs from "./pages/AboutUs";
+import TermsConditions from "./pages/TermsCondition";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 export default function App() {
   return (
@@ -23,6 +25,8 @@ export default function App() {
             <Route path="/Coding" element={<CodingPage />} />
             <Route path="/Multimedia" element={<MultimediaPage />} />
             <Route path="/AboutUs" element={<AboutUs />} />
+            <Route path="/terms" element={<TermsConditions />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </main>
         <WhatsAppButton />

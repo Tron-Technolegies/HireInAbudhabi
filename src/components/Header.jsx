@@ -36,8 +36,14 @@ export default function Header() {
   return (
     <header className="bg-white shadow sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
-        <div className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 text-3xl font-bold">
-          HireInAbuDhabi
+        <div className="flex items-center">
+          <Link to="/">
+            <img
+              src="/HireinAbudhabilogo.jpg"
+              alt="Hire in Abu Dhabi Logo | Remote Staffing, HR Outsourcing"
+              className="h-8 w-auto object-contain"
+            />
+          </Link>
         </div>
 
         {/* Desktop Nav */}

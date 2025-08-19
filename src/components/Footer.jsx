@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // Import SVG icons from /assets/icons
 import FacebookIcon from "../assets/icons/facebook.svg";
@@ -18,9 +19,9 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: FacebookIcon, url: "#" },
-    { icon: TwitterIcon, url: "#" },
-    { icon: InstagramIcon, url: "#" },
+    { icon: FacebookIcon, url: "https://www.facebook.com/HireinAbudhabi" },
+    { icon: TwitterIcon, url: "https://x.com/HireinAbuDhabi" },
+    { icon: InstagramIcon, url: "https://www.instagram.com/hireinabudhabi/" },
     { icon: LinkedinIcon, url: "#" },
   ];
 
@@ -30,7 +31,11 @@ export default function Footer() {
         {/* Header */}
         <div className="flex justify-center sm:justify-start mb-8">
           <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 text-2xl md:text-3xl font-bold">
-            HireInAbuDhabi
+            <img
+              src="/Hirein-footer.webp"
+              className="h-32 w-auto object-contain"
+              alt="Hire in Abu Dhabi Logo | Outsourcing Services"
+            />
           </h3>
         </div>
 
@@ -42,14 +47,23 @@ export default function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.path}
-                    target={link.external ? "_blank" : "_self"}
-                    rel={link.external ? "noopener noreferrer" : ""}
-                    className="hover:text-green-600 transition-colors duration-200 text-gray-600"
-                  >
-                    {link.name}
-                  </a>
+                  {link.external ? (
+                    <a
+                      href={link.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-green-600 transition-colors duration-200 text-gray-600"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link
+                      to={link.path}
+                      className="hover:text-green-600 transition-colors duration-200 text-gray-600"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -62,7 +76,9 @@ export default function Footer() {
               <li className="flex flex-col sm:flex-row items-center sm:items-start gap-2">
                 <div className="flex items-center">
                   <MapPin className="w-5 h-5 mr-2 text-green-600 flex-shrink-0" />
-                  <span className="text-gray-600">123 Business Avenue, Abu Dhabi, UAE</span>
+                  <span className="text-gray-600">
+                    Plot 122, Ad Doja 1st St, M-40 Mussafah, Abu Dhabi, United Arab Emirates
+                  </span>
                 </div>
               </li>
               <li className="flex flex-col sm:flex-row items-center sm:items-start gap-2">
@@ -72,7 +88,7 @@ export default function Footer() {
                     href="mailto:hireinabudhabi@gmail.com"
                     className="hover:text-green-600 transition-colors duration-200 text-gray-600"
                   >
-                    hireinabudhabi@gmail.com
+                    Hireinmarketing@gmail.com
                   </a>
                 </div>
               </li>
@@ -135,18 +151,18 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} HireInAbuDhabi. All rights reserved.
             </div>
             <div className="flex space-x-4">
-              <a
-                href="/privacy-policy"
+              <Link
+                to="/privacy-policy"
                 className="hover:text-green-600 text-sm transition-colors duration-200 text-gray-600"
               >
                 Privacy Policy
-              </a>
-              <a
-                href="/terms"
+              </Link>
+              <Link
+                to="/terms"
                 className="hover:text-green-600 text-sm transition-colors duration-200 text-gray-600"
               >
                 Terms & Conditions
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -201,29 +201,32 @@
 //     </section>
 //   );
 // }
-
 import React from "react";
-import { Search, Users, TrendingUp, Code, Video, Image } from "lucide-react";
+import { Search, Code, Video } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // ✅ import Link
 
 const services = [
   {
-    category: "Digital Marketing ",
+    category: "Digital Marketing",
     description:
       "SEO Specialists, Google Ads Experts, Performance Marketers, Social Media Managers, Content Marketers, and more.",
     icon: <Search className="w-8 h-8 text-green-600" />,
+    link: "/Digitalmarketing", // ✅ route
   },
   {
-    category: "Coding ",
+    category: "Coding",
     description:
       "Front-end Developers, Back-end Developers, Mobile App Developers, Web App Developers, UI/UX Developers, and more.",
     icon: <Code className="w-8 h-8 text-green-600" />,
+    link: "/Coding", // ✅ route
   },
   {
-    category: "Multimedia ",
+    category: "Multimedia",
     description:
       "Video Editors, Motion Graphics Artists, Content Creators, Animators, 3D Designers, Visual Storytellers, and more.",
     icon: <Video className="w-8 h-8 text-green-600" />,
+    link: "/Multimedia", // ✅ route
   },
 ];
 
@@ -255,19 +258,22 @@ export default function Services() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="rounded-xl border border-gray-200 p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
-            >
-              <div className="mb-5 p-4 rounded-full bg-green-50">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.category}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
-                {service.description}
-              </p>
-            </motion.div>
+            <Link key={index} to={service.link} className="block">
+              {" "}
+              {/* ✅ clickable card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="rounded-xl border border-gray-200 p-8 flex flex-col items-center text-center hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+              >
+                <div className="mb-5 p-4 rounded-full bg-green-50">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.category}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
+                  {service.description}
+                </p>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </div>

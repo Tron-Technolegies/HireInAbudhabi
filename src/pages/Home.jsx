@@ -11,6 +11,7 @@ import BrandLogos from "../components/BrandLogos";
 import { Helmet } from "react-helmet";
 import FAQSection from "../components/FaqSection";
 import BottomSection from "../components/BottomSection";
+import MeetOurTeam from "../components/MeetOurTeam";
 
 export default function Home() {
   useEffect(() => {
@@ -33,9 +34,9 @@ export default function Home() {
       <section id="brandlogos">
         <BrandLogos />
       </section>
-      <section id="howItWorks">
+      {/* <section id="howItWorks">
         <HowItWorks />
-      </section>
+      </section> */}
       <section id="services">
         <Services />
       </section>
@@ -46,6 +47,7 @@ export default function Home() {
       <section id="industries">
         <Industries />
       </section>
+      <MeetOurTeam />
       {/* <section>
         <CandidateProfiles />
       </section> */}
