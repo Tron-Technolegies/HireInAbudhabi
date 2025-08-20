@@ -248,11 +248,11 @@ export default function Testimonials() {
             <h4 className="text-lg font-semibold text-gray-800 mb-2">“{review.title}”</h4>
             <p className="text-gray-600 text-sm mb-4">{review.comment}</p>
             <div className="flex items-center gap-4">
-              <img
+              {/* <img
                 src={review.image}
                 alt={review.name}
                 className="w-12 h-12 rounded-full object-cover"
-              />
+              /> */}
               <div>
                 <p className="font-medium text-gray-900 text-sm">{review.name}</p>
                 <p className="text-xs text-gray-500">{review.company}</p>
