@@ -14,7 +14,7 @@ const faqData = [
   {
     question: "Do you have SEO experts and performance marketers available in Dubai and Abu Dhabi?",
     answer:
-      "Yes, you can hire a Dubai SEO expert, an Abu Dhabi performance marketing expert, or a Google Ads professional—all reviewed, results-oriented individuals.",
+      "Yes, you can hire a Dubai SEO expert, an Abu Dhabi performance marketing expert, or a Google Ads professional all reviewed, results-oriented individuals.",
   },
   {
     question: "How do I hire a freelance web designer or developer in Abu Dhabi?",
@@ -52,7 +52,7 @@ export default function FAQSection() {
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 px-4 sm:px-10">
-      <h2 className="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
+      <h2 className="text-3xl font-bold mb-14 text-center">Frequently Asked Questions</h2>
       <div className="max-w-4xl mx-auto space-y-4">
         {faqData.map((faq, index) => (
           <div key={index} className="border border-gray-700 rounded-lg">

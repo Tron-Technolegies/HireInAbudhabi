@@ -43,19 +43,19 @@ export default function Industries() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-6"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
             Industries{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
               We Serve Best
             </span>
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-300 max-w-2xl mx-auto ">
             Connecting businesses with top marketing talent across key industries in Abu Dhabi.
           </p>
         </motion.div>
 
         {/* Auto-scrolling container */}
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden mb-5 mt-20">
           <div className="flex animate-scroll-x">
             {/* First set */}
             {industries.map((industry, id) => (
@@ -79,7 +79,7 @@ export default function Industries() {
             {industries.map((industry, id) => (
               <div
                 key={`second-${id}`}
-                className="flex-shrink-0 w-64 mx-3 snap-center bg-gray-800 rounded-xl p-6 shadow-lg flex flex-col items-center justify-start"
+                className="flex-shrink-0 w-64 mx-3  snap-center bg-gray-800 rounded-xl p-6 shadow-lg flex flex-col items-center justify-start"
               >
                 <div
                   className={`w-14 h-14 flex items-center justify-center rounded-full mb-4 ${colors[id]}`}

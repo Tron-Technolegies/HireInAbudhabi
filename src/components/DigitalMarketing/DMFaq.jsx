@@ -7,7 +7,7 @@ const faqData = [
       "As with any other profession (for example hiring a doctor), when considering a marketer or digital marketing expert in Abu Dhabi, a social media manager in Dubai, focus on experience and not just degrees or diplomas . Seek experience, results in terms of successful digital marketing campaigns, knowledge about managing digital campaigns on Google's ad platform, knowledge about SEO, social media teams and paid campaigns and a range of analytical skills. Today many people have formal certifications from organisations including Google and HubSpot and Meta. The key factor is how well the person understands your industry and the market you serve.",
   },
   {
-    question: "I have a little business — do I really need Digital Marketing?",
+    question: "I have a little business do I really need Digital Marketing?",
     answer:
       "Definitely. Whether you are running a small shop in Abu Dhabi or a service based business in Dubai, digital marketing puts you in front of the potential customer at the point of search. Hiring a SEO expert in Abu Dhabi or social media marketer in Dubai can provide cost-effective targeted audiences. Even with a small budget you can use your marketing budget wisely in various responsive strategies, like SEO, Google Ads or social media to produce meaningful results.",
   },

@@ -14,7 +14,6 @@ import handcar from "../assets/logos/Handcar.webp";
 
 export default function BrandLogos() {
   const topRowLogos = [
-    { name: "Wexo", img: wexo, alt: "Wexo Logo | Outsourcing & Staffing UAE" },
     {
       name: "Dahab",
       img: dahab,
@@ -30,11 +29,7 @@ export default function BrandLogos() {
       img: tronmarketing,
       alt: "Tron Marketing Logo | Digital Marketing, Branding, Social Media Marketing, Outsourcing & Staffing UAE",
     },
-    {
-      name: "Tron Academy",
-      img: tronacademy,
-      alt: "Tron Academy Logo | Digital Marketing Training, Online Courses, Skill Development, Outsourcing & Staffing UAE",
-    },
+
     {
       name: "Tikka Tonight",
       img: tikkatonight,
@@ -59,6 +54,13 @@ export default function BrandLogos() {
       alt: "Collective Transportation LLC Logo | IT Outsourcing Companies in Dubai",
     },
     {
+      name: "Tron Academy",
+      img: tronacademy,
+      alt: "Tron Academy Logo | Digital Marketing Training, Online Courses, Skill Development, Outsourcing & Staffing UAE",
+    },
+    { name: "Wexo", img: wexo, alt: "Wexo Logo | Outsourcing & Staffing UAE" },
+
+    {
       name: "Lebanese Mill",
       img: lebanesemill,
       alt: "Lebanese Mill Restaurant Logo | Outsourcing & Staffing UAE, IT Outsourcing Companies in Dubai",
@@ -77,11 +79,11 @@ export default function BrandLogos() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Partner with Industry Leading Experts
           </h2>
-          <p className="text-lg text-gray-600">Trusted By Startups & Agencies in the UAE</p>
+          <p className="text-lg text-gray-600 ">Trusted By Startups & Agencies in the UAE</p>
         </div>
 
         {/* Top row - moving left */}
-        <div className="relative mb-8">
+        <div className="relative mt-5 mb-8">
           <div className="flex animate-scroll-left">
             {/* First set of logos */}
             {topRowLogos.map((logo, index) => (

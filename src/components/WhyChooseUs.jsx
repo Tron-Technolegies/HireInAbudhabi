@@ -175,7 +175,7 @@ export default function WhyChooseUs() {
     },
     {
       title: "Remote Staffing, Made Local",
-      text: `Looking to hire remote employees in the UAE? Our network includes remote-ready professionals —so you get flexibility`,
+      text: `Looking to hire remote employees in the UAE? Our network includes remote-ready professionals so you get flexibility`,
       icon: <Globe className="text-green-400 w-6 h-6" />,
     },
     {
@@ -197,7 +197,7 @@ export default function WhyChooseUs() {
         </h2>
 
         {/* Description */}
-        <p className="text-gray-300 text-center mb-12 max-w-4xl mx-auto">
+        <p className="text-gray-300 text-center mb-20 max-w-4xl mx-auto">
           At Hire In Abu Dhabi; we are much more than just an outsourcing platform. We work in
           partnership with talent for UAE-based businesses, startups, and creators. This is why
           hundreds of companies still hire through us:

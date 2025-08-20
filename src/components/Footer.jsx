@@ -32,8 +32,8 @@ export default function Footer() {
         <div className="flex justify-center sm:justify-start mb-8">
           <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 text-2xl md:text-3xl font-bold">
             <img
-              src="/Hirein-footer.webp"
-              className="h-32 w-auto object-contain"
+              src="/Hirein-footer.jpg"
+              className="h-16 w-auto object-contain"
               alt="Hire in Abu Dhabi Logo | Outsourcing Services"
             />
           </h3>
@@ -74,8 +74,8 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex flex-col sm:flex-row items-center sm:items-start gap-2">
-                <div className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-2 text-green-600 flex-shrink-0" />
+                <div className="flex place-items-start">
+                  <MapPin className="w-5 h-5 mr-2 text-green-600 flex-shrink-0 " />
                   <span className="text-gray-600">
                     Plot 122, Ad Doja 1st St, M-40 Mussafah, Abu Dhabi, United Arab Emirates
                   </span>
