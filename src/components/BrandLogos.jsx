@@ -10,7 +10,7 @@ import collectivetransportation from "../assets/logos/CollectiveTransportation.w
 import lebanesemill from "../assets/logos/LebaneseMill.webp";
 import tikkatonight from "../assets/logos/TikkaTonight.webp";
 import goldengate from "../assets/logos/GoldenGate.webp";
-import handcar from "../assets/logos/HandCar.webp";
+import handcar from "../assets/logos/Handcar.webp";
 
 export default function BrandLogos() {
   const topRowLogos = [
