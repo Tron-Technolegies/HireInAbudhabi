@@ -252,8 +252,8 @@ export default function Services() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="text-gray-600 max-w-2xl mx-auto mb-12"
         >
-          Hire skilled professionals in Digital Marketing, Coding, and Multimedia — customized to
-          help you reach your business goals.
+          Hire skilled professionals in Digital Marketing, Coding, and Multimedia customized to help
+          you reach your business goals.
         </motion.p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">

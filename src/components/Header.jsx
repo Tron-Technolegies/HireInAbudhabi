@@ -166,13 +166,13 @@ export default function Header() {
                   <summary className="flex justify-between items-center px-4 py-2 font-semibold text-lg cursor-pointer hover:bg-green-100 rounded-md">
                     Services <ChevronDown className="w-4 h-4" />
                   </summary>
-                  <div className="pl-4 mt-1 space-y-1">
+                  <div className="pl-2 mt-1 space-y-0">
                     {services.map((service) => (
                       <Link
                         key={service}
                         to={`/${service}`}
                         onClick={() => setMenuOpen(false)}
-                        className={`block px-4 py-2 rounded-md hover:bg-green-100 ${
+                        className={`block px-3 py-1.5 text-sm rounded-md hover:bg-green-100 ${
                           location.pathname === `/${service}` ? "bg-green-100 text-green-600" : ""
                         }`}
                       >

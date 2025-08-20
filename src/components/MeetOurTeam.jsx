@@ -36,7 +36,7 @@ const MeetOurTeam = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -50,16 +50,13 @@ const MeetOurTeam = () => {
         {/* Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member) => (
-            <div
-              key={member.id}
-              className="bg-white rounded-b-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
+            <div key={member.id} className="bg-white  overflow-hidden ">
               {/* Member Image */}
               <div className="aspect-square overflow-hidden bg-white">
                 <img
                   src={member.image}
                   alt={member.alt}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover "
                   onError={(e) => {
                     // Fallback to placeholder if image doesn't load
                     e.target.src = `https://via.placeholder.com/400x400/E5E7EB/6B7280?text=${member.name
@@ -71,8 +68,8 @@ const MeetOurTeam = () => {
               </div>
 
               {/* Member Info */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
+              <div className="p-2">
+                <h3 className="text-xl font-bold text-gray-900 mb-0">{member.name}</h3>
                 <p className="text-green-600 font-semibold mb-3">{member.position}</p>
                 {/* <p className="text-gray-600 text-sm mb-4 leading-relaxed">{member.bio}</p> */}
 

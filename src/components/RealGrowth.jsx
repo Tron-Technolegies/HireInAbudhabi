@@ -12,9 +12,9 @@ export default function RealGrowth() {
           </span>
         </h2>
         <p className="text-gray-300 text-lg leading-relaxed">
-          We don’t just create campaigns — we deliver results. Our proven
-          frameworks are tailored to help you grow consistently, backed by data
-          and strategy.
+          We don’t just create campaigns we deliver results. Our proven frameworks are tailored to{" "}
+          <br />
+          help you grow consistently, backed by data and strategy.
         </p>
         <div className="mt-8">
           <a

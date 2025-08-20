@@ -12,7 +12,7 @@ export default function WhatWeDo() {
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             At Hire In AbuDhabi, we provide flexible hiring solutions that cater to your project's
-            scale, timeline, and budget — whether you need quick project support or long-term
+            scale, timeline, and budget whether you need quick project support or long-term
             assistance.
           </p>
         </div>
