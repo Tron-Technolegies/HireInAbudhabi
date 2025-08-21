@@ -27,7 +27,10 @@ export default function AboutHero() {
                 We're not a conventional BPO. We provide more intelligent, flexible hiring
                 freelance, part-time, or full-time.
               </p>
-              <button title="Contact-Now" className="flex justify-center lg:justify-start">
+              <button
+                title="Contact-Now"
+                className="flex inline-flex justify-center lg:justify-start"
+              >
                 <a
                   href="https://wa.me/971568145866"
                   target="_blank"

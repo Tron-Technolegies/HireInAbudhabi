@@ -51,13 +51,13 @@ export default function WhyChooseInHowItWorks() {
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center  mb-5"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-2 leading-tight">
+          <h2 className="text-4xl md:text-5xl  font-bold text-black mb-2 leading-tight">
             Why It's Better Than Conventional{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-600">
               BPO Outsourcing providers in Abu dhabi
@@ -73,7 +73,7 @@ export default function WhyChooseInHowItWorks() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p className="text-xl text-gray-700 text-center mb-12 leading-relaxed">
+          <p className="text-xl text-gray-700 text-center mb-16 leading-relaxed">
             In contrast to conventional BPO outsourcing providers in Dubai, we allow you to:
           </p>
 

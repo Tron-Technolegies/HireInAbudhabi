@@ -13,20 +13,20 @@ export default function HowItWorksHero() {
   ];
 
   return (
-    <div className="bg-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-6 py-16">
+    <div className="bg-white ">
+      <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Hero Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-8 leading-tight">
+        <div className="text-center mb-10">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-black mb-10 leading-tight">
             How Hire In Abu Dhabi Works
           </h1>
         </div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 items-start">
           {/* Left Column - Content */}
           <div className="space-y-8">
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed align-left">
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify">
               <p>
                 Our expert selection process is thoughtfully designed to deliver the best standards
                 of quality. We ourselves choose experts from India's best institutions and outside
