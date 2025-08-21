@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
@@ -133,7 +132,7 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      {menuOpen && (
+      {isMobile && menuOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
           <div className="relative max-w-xs w-11/12 sm:max-w-sm bg-white/90 backdrop-blur-md rounded-xl shadow-2xl p-6">
             <div className="flex justify-between items-center mb-6">
@@ -146,6 +145,7 @@ export default function Header() {
                 <X size={28} />
               </button>
             </div>
+
             <ul className="space-y-4">
               {/* Home */}
               <li>
@@ -160,27 +160,27 @@ export default function Header() {
                 </Link>
               </li>
 
-              {/* Services */}
+              {/* Services as inline sub-items */}
               <li>
-                <details className="group">
-                  <summary className="flex justify-between items-center px-4 py-2 font-semibold text-lg cursor-pointer hover:bg-green-100 rounded-md">
-                    Services <ChevronDown className="w-4 h-4" />
-                  </summary>
-                  <div className="pl-2 mt-1 space-y-0">
-                    {services.map((service) => (
-                      <Link
-                        key={service}
-                        to={`/${service}`}
-                        onClick={() => setMenuOpen(false)}
-                        className={`block px-3 py-1.5 text-sm rounded-md hover:bg-green-100 ${
-                          location.pathname === `/${service}` ? "bg-green-100 text-green-600" : ""
-                        }`}
-                      >
-                        {service === "Digitalmarketing" ? "Digital Marketing" : service}
-                      </Link>
-                    ))}
-                  </div>
-                </details>
+                <span className="block text-center font-semibold text-lg text-gray-800">
+                  Services
+                </span>
+                <div className="mt-2 flex flex-col items-center space-y-1">
+                  {services.map((service) => (
+                    <Link
+                      key={service}
+                      to={`/${service}`}
+                      onClick={() => setMenuOpen(false)}
+                      className={`w-full text-center block px-3 py-1 rounded-md text-base hover:bg-green-100 ${
+                        location.pathname === `/${service}`
+                          ? "bg-green-100 text-green-600"
+                          : "text-gray-700"
+                      }`}
+                    >
+                      {service === "Digitalmarketing" ? "Digital Marketing" : service}
+                    </Link>
+                  ))}
+                </div>
               </li>
 
               {/* Remaining Items */}

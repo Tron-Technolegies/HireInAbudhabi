@@ -158,6 +158,17 @@ export default function BrandLogos() {
           animation: scroll-right 30s linear infinite;
         }
 
+        /* Faster animation on mobile */
+        @media (max-width: 639px) {
+          .animate-scroll-left {
+            animation: scroll-left 8s linear infinite;
+          }
+
+          .animate-scroll-right {
+            animation: scroll-right 8s linear infinite;
+          }
+        }
+
         /* Pause animation on hover */
         .animate-scroll-left:hover,
         .animate-scroll-right:hover {

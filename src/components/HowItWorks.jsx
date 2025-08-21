@@ -233,7 +233,7 @@ export default function HowItWorks() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <section className="py-16 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Heading */}
         <motion.div
@@ -258,7 +258,7 @@ export default function HowItWorks() {
           </p>
 
           {/* Underline */}
-          <div className="w-32 h-1 mx-auto bg-gradient-to-r from-green-400 to-blue-500 rounded-full"></div>
+          {/* <div className="w-32 h-1 mx-auto bg-gradient-to-r from-green-400 to-blue-500 rounded-full"></div> */}
         </motion.div>
 
         {/* Cards */}
@@ -292,7 +292,7 @@ export default function HowItWorks() {
             visible: { opacity: 1, y: 0 },
           }}
           transition={{ delay: 1.5, duration: 0.8, ease: "easeOut" }}
-          className="mt-20"
+          className="mt-14"
         >
           <a
             href="https://wa.me/971568145866?text=Hi%2C%20I'm%20looking%20for%20help%20with%20%5BSMM%20%2F%20SEO%20%2F%20Ads%20%2F%20Content%5D.%20Can%20you%20assist%3F"

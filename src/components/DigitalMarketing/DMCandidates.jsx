@@ -41,7 +41,7 @@ export default function DMCandidates() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedCandidate, setSelectedCandidate] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
-  const [cardsPerPage, setCardsPerPage] = useState(3); // Default to 3 cards per page
+  const [cardsPerPage, setCardsPerPage] = useState(3);
 
   const candidates = useMemo(() => {
     return dmCandidates.map((candidate, index) => ({
@@ -117,39 +117,37 @@ export default function DMCandidates() {
     );
 
   return (
-    <section className="py-16 bg-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-8 sm:py-12 lg:py-16 bg-white lg:min-h-screen">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 ">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-3 sm:mb-4">
             Our <span className="">Digital Marketing Experts</span>
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto px-4">
             Ignite Your Brand, Engage Your Audience Hire Marketing Mavericks
           </p>
         </div>
 
         {/* Carousel Container */}
         <div
-          className="relative max-w-6xl mx-auto"
+          className="relative max-w-6xl mx-auto  "
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          {/* Navigation Buttons (Outside the card section, adjusted position for responsiveness) */}
+          {/* Navigation Buttons - Hidden on mobile, visible on larger screens */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 sm:left-[-50px] top-1/2 -translate-y-1/2 z-10 bg-white shadow-2xl hover:bg-gray-50 rounded-full p-3 transition-all duration-300 hover:scale-110 border"
-            // For smaller screens, left-0 will keep it visible. For sm and above, it goes to -50px.
+            className="hidden sm:block absolute left-[-50px] top-1/2 -translate-y-1/2 z-10 bg-white shadow-2xl hover:bg-gray-50 rounded-full p-3 transition-all duration-300 hover:scale-110 border"
           >
-            <ChevronLeft className="w-6 h-6 text-gray-700" />
+            <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6 text-gray-700" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 sm:right-[-50px] top-1/2 -translate-y-1/2 z-10 bg-white shadow-2xl hover:bg-gray-50 rounded-full p-3 transition-all duration-300 hover:scale-110 border"
-            // For smaller screens, right-0 will keep it visible. For sm and above, it goes to -50px.
+            className="hidden sm:block absolute right-[-50px] top-1/2 -translate-y-1/2 z-10 bg-white shadow-2xl hover:bg-gray-50 rounded-full p-3 transition-all duration-300 hover:scale-110 border"
           >
-            <ChevronRight className="w-6 h-6 text-gray-700" />
+            <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6 text-gray-700" />
           </button>
 
           {/* Carousel Track */}
@@ -161,32 +159,36 @@ export default function DMCandidates() {
               {candidates.map((candidate) => (
                 <div
                   key={candidate.id}
-                  className={`flex-shrink-0 px-3 ${
+                  className={`flex-shrink-0  px-2 sm:px-3 mb-6 sm:mb-6 ${
                     cardsPerPage === 1 ? "w-full" : cardsPerPage === 2 ? "w-1/2" : "w-1/3"
                   }`}
                 >
-                  <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 h-[480px] flex flex-col">
-                    <div className="flex flex-col items-center text-center space-y-4 flex-1">
+                  <div className="bg-white rounded-2xl shadow-lg border border-gray-200 h-auto flex flex-col overflow-hidden">
+                    {/* Card Content */}
+                    <div className="p-4 sm:p-6 flex-1 flex flex-col">
                       {/* Profile Image */}
-                      <div className="relative">
-                        <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg ring-2 ring-white">
-                          <img
-                            // src={candidate.image} // This line is now commented out
-                            src={candidate.image} // Using fallback random user images
-                            alt={candidate.name}
-                            className="w-full h-full object-cover"
-                          />
+                      <div className="flex justify-center mb-4">
+                        <div className="relative">
+                          <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden shadow-lg ring-2 ring-white">
+                            <img
+                              src={candidate.image}
+                              alt={candidate.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
                         </div>
                       </div>
 
                       {/* Profile Info */}
-                      <div className="flex-1 space-y-3">
+                      <div className="text-center flex-1 space-y-3 sm:space-y-4">
                         <div>
-                          <h3 className="text-xl font-bold text-gray-900 mb-1">{candidate.name}</h3>
-                          <p className="text-gray-700 font-semibold text-base mb-1">
+                          <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">
+                            {candidate.name}
+                          </h3>
+                          <p className="text-gray-700 font-semibold text-sm sm:text-base mb-1">
                             {candidate.role}
                           </p>
-                          <div className="flex items-center justify-center text-gray-500 text-sm">
+                          <div className="flex items-center justify-center text-gray-500 text-xs sm:text-sm">
                             <MapPin className="w-3 h-3 mr-1" />
                             <span>
                               {candidate.location} • {candidate.experience}
@@ -194,11 +196,13 @@ export default function DMCandidates() {
                           </div>
                         </div>
 
-                        <p className="text-gray-600 text-sm leading-relaxed">{candidate.bio}</p>
+                        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-5">
+                          {candidate.bio}
+                        </p>
 
                         {/* Skills */}
                         <div>
-                          <h4 className="text-xs font-semibold text-gray-700 mb-2">
+                          <h4 className="text-xs font-semibold text-gray-700 mb-3">
                             Technical Expertise
                           </h4>
                           <div className="flex flex-wrap gap-1 justify-center">
@@ -213,12 +217,14 @@ export default function DMCandidates() {
                           </div>
                         </div>
                       </div>
+                    </div>
 
-                      {/* Action Buttons */}
+                    {/* Action Buttons - Now at bottom */}
+                    <div className="p-4 sm:p-6 pt-0 mt-auto">
                       <div className="flex flex-col gap-2 w-full">
                         <button
                           onClick={() => selectCandidate(candidate)}
-                          className={`w-full py-2 rounded-full font-semibold text-sm transition-all duration-300 ${
+                          className={`w-full py-2.5 sm:py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
                             selectedCandidate?.id === candidate.id
                               ? "bg-gray-900 text-white shadow-lg"
                               : "bg-white text-gray-700 hover:bg-gray-50 shadow-lg border-2 border-gray-200 hover:border-gray-400"
@@ -236,7 +242,7 @@ export default function DMCandidates() {
                             )}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-2 w-full py-2 bg-green-500 text-white rounded-full font-semibold text-sm hover:bg-green-600 transition-all duration-300 shadow-lg"
+                            className="inline-flex items-center justify-center gap-2 w-full py-2.5 sm:py-3 bg-green-500 text-white rounded-full font-semibold text-sm hover:bg-green-600 transition-all duration-300 shadow-lg animate-in slide-in-from-bottom-2 duration-200"
                           >
                             <MessageCircle className="w-4 h-4" />
                             Hire Now
@@ -249,9 +255,27 @@ export default function DMCandidates() {
               ))}
             </div>
           </div>
+          {/* Mobile Navigation Buttons - Placed at the bottom inside the card */}
+          <div className="sm:hidden flex gap-5 justify-center items-center px-4 lg:pb-4">
+            <button
+              onClick={prevSlide}
+              className="bg-white shadow-lg hover:bg-gray-50 rounded-full p-2 transition-all duration-300 border"
+            >
+              <ChevronLeft className="w-5 h-5 text-gray-700" />
+            </button>
+            <span className="text-sm text-gray-500 font-medium">
+              {currentIndex + 1} / {candidates.length}
+            </span>
+            <button
+              onClick={nextSlide}
+              className="bg-white shadow-lg hover:bg-gray-50 rounded-full p-2 transition-all duration-300 border"
+            >
+              <ChevronRight className="w-5 h-5 text-gray-700" />
+            </button>
+          </div>
 
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-10 gap-3">
+          {/* Dots Indicator - Hidden on mobile */}
+          <div className="hidden sm:flex justify-center lg:mt-10 gap-3">
             {candidates.map((_, index) => (
               <button
                 key={index}
