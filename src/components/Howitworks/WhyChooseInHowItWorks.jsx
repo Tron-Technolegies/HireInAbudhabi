@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Users, Zap, TrendingUp, Target } from "lucide-react";
 
+import { useNavigate, useLocation } from "react-router-dom";
+
 export default function WhyChooseInHowItWorks() {
   const features = [
     {
@@ -46,6 +48,28 @@ export default function WhyChooseInHowItWorks() {
     },
   };
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // inline scroll-to-section function
+  const handleScrollToSection = (id) => {
+    if (location.pathname === "/") {
+      // already on homepage → just scroll
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // navigate to homepage → then scroll
+      navigate("/");
+      setTimeout(() => {
+        const section = document.getElementById(id);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300);
+    }
+  };
   return (
     <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -136,8 +160,8 @@ export default function WhyChooseInHowItWorks() {
 
           {/* CTA Button */}
           <div className="text-center">
-            <motion.a
-              href="#"
+            <motion.button
+              onClick={() => handleScrollToSection("services")}
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-green-600 rounded-full hover:from-green-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -145,7 +169,7 @@ export default function WhyChooseInHowItWorks() {
               transition={{ duration: 0.6, delay: 1 }}
             >
               Browse for experts
-            </motion.a>
+            </motion.button>
           </div>
         </motion.div>
       </div>

@@ -25,7 +25,7 @@ export default function App() {
             <Route path="/Coding" element={<CodingPage />} />
             <Route path="/Multimedia" element={<MultimediaPage />} />
             <Route path="/AboutUs" element={<AboutUs />} />
-            <Route path="/terms" element={<TermsConditions />} />
+            <Route path="/terms-and-conditions" element={<TermsConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </main>

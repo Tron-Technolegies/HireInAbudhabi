@@ -131,7 +131,7 @@ export default function HowItWorks() {
       title: "Tell Us What You Need",
       description: (
         <>
-          Fill out a simple request form or explore our categories. Tell us your needs—whether
+          Fill out a simple request form or explore our categories. Tell us your needs whether
           you're looking to hire an Abu Dhabi website developer, a Dubai social media manager, or a
           freelance graphic designer on a one-off project.
           <br />
