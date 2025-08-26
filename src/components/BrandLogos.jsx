@@ -11,6 +11,7 @@ import lebanesemill from "../assets/logos/LebaneseMill.webp";
 import tikkatonight from "../assets/logos/TikkaTonight.webp";
 import goldengate from "../assets/logos/GoldenGate.webp";
 import handcar from "../assets/logos/Handcar.webp";
+import sariah from "../assets/logos/Sariah.webp";
 
 export default function BrandLogos() {
   const topRowLogos = [
@@ -39,6 +40,11 @@ export default function BrandLogos() {
       name: "Golden Gate",
       img: goldengate,
       alt: "Golden Gate Hardware & Electrical Equipment Trading LLC Logo | Hardware, Tools & Electrical Supplies Dubai UAE | Supported by Outsourcing & Staffing UAE, BPO Outsourcing Companies in Dubai",
+    },
+    {
+      name: "Sariah Facility Management",
+      img: sariah,
+      alt: "Sariah logo – complete facility management company | hire remote employees",
     },
   ];
 
