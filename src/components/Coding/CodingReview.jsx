@@ -1,27 +1,33 @@
 import React, { useState } from "react";
 import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import handcar from "../../assets/logos/Handcar.webp";
+import dahab from "../../assets/logos/DahabMiners.webp";
 
 export default function CodingReview() {
   const [currentReview, setCurrentReview] = useState(0);
 
   const reviews = [
     {
-      role: "Full-Stack Developer",
+      role: "Handcar",
       name: "ALI M.",
-      initial: "A",
+      logo: handcar,
+      alt: "Handacar branding - professional web development in Abu Dhabi and coding experts",
       position: "Operations Manager",
       review:
-        "We needed a fast and responsive internal dashboard for our logistics company. The developer hired via this platform was efficient, wrote clean code, and helped optimize some backend processes. Deadlines were met without compromise on quality.",
-      author: "— Ali M, Operations Manager",
+        "The developers we hired through Hire in Abu Dhabi built a complete Handcar solution website and app with service, parts, and subscription. It’s accelerating our growth and customer reach.",
+      author: "Rushil , Chief Executive Officer",
+      website: "https://handcar.ae/",
     },
     {
-      role: "Frontend Developer",
+      role: "Dahab Miners",
       name: "SARAH KHAN",
-      initial: "S",
+      logo: dahab,
+      alt: "Dahab Miners logo - coding experts in Abu Dhabi and freelance web designer services.",
       position: "Program Director",
       review:
-        "Our NGO's website was very outdated and not responsive to present-day standards. A coder should be applauded for delivering a beautifully coded site with flawless mobile optimization. Communication was smooth, and proper documentation was provided.",
-      author: "— Sarah Khan, Program Director",
+        "We hired a developer through Hire in Abu Dhabi, and the results were outstanding. They built our website and app, and the entire experience was straightforward and consistent",
+      author: "Rizwan Kamarudheen, Chief Executive Officer",
+      website: "https://dahabminers.com/",
     },
   ];
 
@@ -60,22 +66,38 @@ export default function CodingReview() {
             <div>
               <div className="bg-white rounded-2xl p-6 shadow-lg flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                      <span className="text-blue-600 font-bold text-lg">
-                        {reviews[currentReview].initial}
-                      </span>
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-black">
-                        {reviews[currentReview].role}
-                      </h4>
-                      <p className="text-gray-600 text-sm">{reviews[currentReview].name}</p>
+                  <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    {/* Logo with link */}
+                    <a
+                      href={reviews[currentReview].website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden"
+                    >
+                      <img
+                        src={reviews[currentReview].logo}
+                        alt={reviews[currentReview].alt}
+                        className="w-full h-full object-contain"
+                      />
+                    </a>
+
+                    <div className="min-w-0 flex-1">
+                      {/* Role / Company name with link */}
+                      <a
+                        href={reviews[currentReview].website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        <h4 className="text-lg sm:text-xl font-bold text-black leading-tight">
+                          {reviews[currentReview].role}
+                        </h4>
+                      </a>
                     </div>
                   </div>
 
                   <p className="text-gray-800 leading-relaxed mb-4">
-                    {reviews[currentReview].review}
+                    "{reviews[currentReview].review}"
                   </p>
 
                   <p className="text-sm text-gray-600 font-medium">

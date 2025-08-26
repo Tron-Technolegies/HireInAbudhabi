@@ -38,7 +38,7 @@ export default function Header() {
         <div className="flex items-center">
           <Link to="/">
             <img
-              src="/HireinAbudhabilogo.jpg"
+              src="/HireinAbudhabilogo.webp"
               alt="Hire in Abu Dhabi Logo | Remote Staffing, HR Outsourcing"
               className="h-8 w-auto object-contain"
             />

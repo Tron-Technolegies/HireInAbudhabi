@@ -1,8 +1,8 @@
 import React from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
-// Import SVG icons from /assets/icons
 import FacebookIcon from "../assets/icons/facebook.svg";
 import TwitterIcon from "../assets/icons/twitter.svg";
 import InstagramIcon from "../assets/icons/instagram.svg";
@@ -12,9 +12,9 @@ export default function Footer() {
   const quickLinks = [
     { name: "Home", path: "/" },
     { name: "How It Works", path: "/how-it-works" },
-    { name: "Services", path: "/services" },
-    { name: "Industries", path: "/industries" },
-    { name: "Testimonials", path: "/testimonials" },
+    { name: "Services", sectionId: "services" },
+    { name: "Industries", sectionId: "industries" },
+    { name: "Testimonials", sectionId: "testimonials" },
     { name: "Contact", path: "http://Wa.me/971568145866", external: true },
   ];
 
@@ -24,6 +24,29 @@ export default function Footer() {
     { icon: InstagramIcon, url: "https://www.instagram.com/hireinabudhabi/" },
     { icon: LinkedinIcon, url: "#" },
   ];
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleSectionClick = (sectionId) => {
+    if (location.pathname !== "/") {
+      // If not on homepage, go to "/" first
+      navigate("/");
+      // Wait until navigation completes, then scroll
+      setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300); // adjust timing if needed
+    } else {
+      // Already on homepage → just scroll
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <footer id="contact" className="bg-white text-gray-800 py-12 px-4 sm:px-6 lg:px-8">
@@ -56,6 +79,13 @@ export default function Footer() {
                     >
                       {link.name}
                     </a>
+                  ) : link.sectionId ? (
+                    <button
+                      onClick={() => handleSectionClick(link.sectionId)}
+                      className="hover:text-green-600 transition-colors duration-200 text-gray-600"
+                    >
+                      {link.name}
+                    </button>
                   ) : (
                     <Link
                       to={link.path}
@@ -158,7 +188,7 @@ export default function Footer() {
                 Privacy Policy
               </Link>
               <Link
-                to="/terms"
+                to="/terms-and-conditions"
                 className="hover:text-green-600 text-sm transition-colors duration-200 text-gray-600"
               >
                 Terms & Conditions
