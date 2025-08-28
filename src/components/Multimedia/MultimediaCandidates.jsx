@@ -78,7 +78,7 @@ export default function MultimediaCandidates() {
             Our Multimedia Experts
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Visually Captivating, Exceptionally Skilled Hire Multimedia Maestros
+            Skilled Multimedia Experts for Captivating Visuals
           </p>
         </div>
 

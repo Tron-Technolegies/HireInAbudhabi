@@ -33,7 +33,7 @@ export default function AboutBottom() {
 
       <button
         onClick={handleScrollToServices}
-        className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 mt-8 rounded"
+        className="bg-green-600 hover:bg-green-600 text-white font-bold py-2 px-4 mt-8 rounded"
       >
         Browse for experts
       </button>

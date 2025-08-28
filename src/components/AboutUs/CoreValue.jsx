@@ -17,19 +17,19 @@ export default function CoreValue() {
       icon: <Handshake className="w-8 h-8 text-white" />,
       title: "Integrity",
       description:
-        "We are transparent to the fullest extent—with clients, partners, and talent. Every encounter is founded on honesty, fairness, and accountability to build enduring trust.",
+        "We are transparent to the fullest extent with clients, partners, and talent. Every encounter is founded on honesty, fairness, and accountability to build enduring trust.",
     },
     {
       icon: <Award className="w-8 h-8 text-white" />,
       title: "Quality First",
       description:
-        "Excellence is not an option. We rigorously screen every expert to confirm that they have the actual-world abilities and professionalism required to create impact from the very start.",
+        "Excellence is not an option. We rigorously screen every expert to confirm that they have the actual world abilities and professionalism required to create impact from the very start.",
     },
     {
       icon: <Zap className="w-8 h-8 text-white" />,
       title: "Efficiency",
       description:
-        "Time is of the essence. We cut to the chase and deliver pre-qualified, ready-to-go professionals who can make an instant impact—quickly.",
+        "Time is of the essence. We cut to the chase and deliver pre-qualified, ready-to-go professionals who can make an instant impact quickly.",
     },
     {
       icon: <HeartHandshake className="w-8 h-8 text-white" />,

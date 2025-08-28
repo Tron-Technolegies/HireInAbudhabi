@@ -1,36 +1,100 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const faqData = [
   {
     question: "What qualifications are important for finding a marketer?",
-    answer:
-      "As with any other profession (for example hiring a doctor), when considering a marketer or digital marketing expert in Abu Dhabi, a social media manager in Dubai, focus on experience and not just degrees or diplomas . Seek experience, results in terms of successful digital marketing campaigns, knowledge about managing digital campaigns on Google's ad platform, knowledge about SEO, social media teams and paid campaigns and a range of analytical skills. Today many people have formal certifications from organisations including Google and HubSpot and Meta. The key factor is how well the person understands your industry and the market you serve.",
+    answer: (
+      <>
+        As with any other profession (for example hiring a doctor), when considering a marketer or{" "}
+        <Link to="/Digitalmarketing">digital marketing expert in Abu Dhabi</Link>, a social media
+        manager in Dubai, focus on experience and not just degrees or diplomas. Seek experience,
+        results in terms of successful digital marketing campaigns, knowledge about managing digital
+        campaigns on Google's ad platform, knowledge about SEO, social media teams and paid
+        campaigns and a range of analytical skills. Today many people have formal certifications
+        from organisations including Google and HubSpot and Meta. The key factor is how well the
+        person understands your industry and the market you serve.
+      </>
+    ),
   },
   {
     question: "I have a little business do I really need Digital Marketing?",
-    answer:
-      "Definitely. Whether you are running a small shop in Abu Dhabi or a service based business in Dubai, digital marketing puts you in front of the potential customer at the point of search. Hiring a SEO expert in Abu Dhabi or social media marketer in Dubai can provide cost-effective targeted audiences. Even with a small budget you can use your marketing budget wisely in various responsive strategies, like SEO, Google Ads or social media to produce meaningful results.",
+    answer: (
+      <>
+        Definitely. Whether you are running a small shop in Abu Dhabi or a service based business in
+        Dubai, digital marketing puts you in front of the potential customer at the point of search.
+        Hiring a{" "}
+        <Link to="/Digitalmarketing">
+          SEO expert in Abu Dhabi or social media marketer in Dubai
+        </Link>{" "}
+        can provide cost-effective targeted audiences. Even with a small budget you can use your
+        marketing budget wisely in various responsive strategies, like SEO, Google Ads or social
+        media to produce meaningful results.
+      </>
+    ),
   },
   {
     question:
       "What are the advantages of working with digital marketing professionals from your company?",
-    answer:
-      "When hiring us you're not just hiring an unqualified freelancer. We are one 'Team', with the vetted professionals you need. Our experts consist of performance marketers in Abu Dhabi, Google Ads experts, and SEO experts in Dubai. These experts have proven results. Make the most of our expertise and industry experience.. This saves you time and money and makes it clear you can be confident in initiatives that drive leads, increase sales and improve you online presence in the UAE.",
+    answer: (
+      <>
+        When hiring us you're not just hiring an unqualified freelancer. We are one 'Team', with the
+        vetted professionals you need. Our experts consist of{" "}
+        <Link to="/Digitalmarketing">performance marketers in Abu Dhabi</Link>, Google Ads experts,
+        and SEO experts in Dubai. These experts have proven results. Make the most of our expertise
+        and industry experience. This saves you time and money and makes it clear you can be
+        confident in initiatives that drive leads, increase sales and improve your online presence
+        in the UAE.
+      </>
+    ),
   },
   {
     question: "What will the digital marketing professionals do for you?",
-    answer:
-      "When you work with our digital marketing professionals, they will do everything needed to help your business grow online. This will include:\nSearch Engine Optimization (SEO) to help your website rank higher on Google.\nGoogle Ads account management to receive targeted paid traffic.\nSocial Media Management account and content creation.\nPerformance Marketing to optimize conversion and customer acquisition costs.\nAnalytics & Reporting so you can clearly understand what is or is not effectively working.\nSo, whether you need an SEO specialist to help you in Abu Dhabi or a social media manager in Dubai, we can change the activities to suit your business goals.",
+    answer: (
+      <>
+        When you work with our digital marketing professionals, they will do everything needed to
+        help your business grow online. This will include:
+        <br />• Search Engine Optimization (SEO) to help your website rank higher on Google.
+        <br />• Google Ads account management to receive targeted paid traffic.
+        <br />• Social Media Management account and content creation.
+        <br />• Performance Marketing to optimize conversion and customer acquisition costs.
+        <br />• Analytics & Reporting so you can clearly understand what is or is not effectively
+        working.
+        <br />
+        So, whether you need an SEO specialist to help you in Abu Dhabi or a social media manager in
+        Dubai, we can change the activities to suit your business goals.
+      </>
+    ),
   },
   {
     question: "How long will it take for me to see results from my digital marketing efforts?",
-    answer:
-      "While digital marketing isn’t magic, digital marketing can still be an impactful way to build your brand, and consistency is required to fully unleash the potential. For seo consultants based in Abu Dhabi or Dubai we usually see results showing within 3 to 6 months of work. Google Ads or performance marketing is usually faster and can see some visible outcomes within weeks or months. The same is true for social media though the growth is variable depending on your branding and current visibility levels, and there are usually some start-end gains that appear across the platforms. As a rule of thumb we look to see clients build sustainable, long-term, and gradual results over time.",
+    answer: (
+      <>
+        While digital marketing isn’t magic, digital marketing can still be an impactful way to
+        build your brand, and consistency is required to fully unleash the potential. For SEO
+        consultants based in Abu Dhabi or Dubai we usually see results showing within 3 to 6 months
+        of work. Google Ads or performance marketing is usually faster and can see some visible
+        outcomes within weeks or months. The same is true for social media though the growth is
+        variable depending on your branding and current visibility levels, and there are usually
+        some start-end gains that appear across the platforms. As a rule of thumb we look to see
+        clients build sustainable, long-term, and gradual results over time.
+      </>
+    ),
   },
   {
     question: "What are your primary digital marketing tactics for B2B and B2C businesses?",
-    answer:
-      "B2B tactics are SEO tactics, LinkedIn marketing, lead generation funnels and performance campaigns to decision makers. B2C tactics are Instagram promoted ads, Facebook ads, or Google Ads to gain traffic, engage customers and ultimately, drive sales. Regardless of whether it is a social media expert in Abu Dhabi or an SEO expert in Dubai, our tactics are attuned to your industry and audience.",
+    answer: (
+      <>
+        B2B tactics are SEO tactics, LinkedIn marketing, lead generation funnels and performance
+        campaigns to decision makers. B2C tactics are Instagram promoted ads, Facebook ads, or
+        Google Ads to gain traffic, engage customers and ultimately, drive sales. Regardless of
+        whether it is a{" "}
+        <Link to="/Digitalmarketing">
+          social media expert in Abu Dhabi or an SEO expert in Dubai
+        </Link>
+        , our tactics are attuned to your industry and audience.
+      </>
+    ),
   },
 ];
 

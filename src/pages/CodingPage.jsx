@@ -19,6 +19,16 @@ export default function CodingPage() {
           name="description"
           content="Finding it hard to get skilled coders in Abu Dhabi? We connect you with the best 1% of coders, who are willing to create and grow your tech at record speed"
         />
+        <meta
+          name="keywords"
+          content="website developer in abu dhabi,
+coding abu dhabi,
+coding experts in abu dhabi,
+web designer in abu dhabi,
+web development in abu dhabi,
+freelance web designer abu dhabi,
+"
+        />
         <link rel="canonical" href="https://hireinabudhabi.com/Coding" />
       </Helmet>
 

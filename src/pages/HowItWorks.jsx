@@ -16,6 +16,15 @@ export default function HowItWorksPage() {
           name="description"
           content="Hire vetted digital marketing, coding, and multimedia experts in Abu Dhabi  fast. Freelance, part-time, or full-time hiring is made simple."
         />
+        <meta
+          name="keywords"
+          content="how outsourcing works in Dubai,
+hire remote employees Abu Dhabi,
+contract staffing process UAE,
+digital marketing outsourcing,
+website development outsourcing,
+creative design outsourcing Dubai,"
+        />
         <link rel="canonical" href="https://hireinabudhabi.com/how-it-works" />
       </Helmet>
 

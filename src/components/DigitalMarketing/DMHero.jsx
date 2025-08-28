@@ -12,7 +12,7 @@ export default function DMHero() {
 
           <p className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed sm:leading-relaxed">
             Skip the search & Save the time. Grow now with a reliable digital marketing expert in
-            Abu Dhabi. Adaptive plans, metrics-based outcomes and genuine impact.
+            Abu Dhabi. Adaptive plans, metrics based outcomes and genuine impact.
           </p>
 
           <div className="flex justify-center pt-2">

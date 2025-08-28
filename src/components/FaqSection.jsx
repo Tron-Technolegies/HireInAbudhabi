@@ -1,45 +1,86 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const faqData = [
   {
     question: "What type of professionals can I hire through Hire In Abu Dhabi?",
-    answer:
-      "We offer vetted digital marketing, coding, and multimedia experts like SEO specialists in Dubai, web developers in Abu Dhabi, graphic design specialists, video editors, and many more. You can hire them on freelance, part-time, or full-time arrangements.",
+    answer: (
+      <>
+        We offer vetted digital marketing, coding, and multimedia experts like{" "}
+        <Link to="/Digitalmarketing">SEO specialists in Dubai</Link>, web developers in Abu Dhabi,
+        graphic design specialists, video editors, and many more. You can hire them on freelance,
+        part-time, or full-time arrangements.
+      </>
+    ),
   },
   {
     question: "Is it possible to hire a digital marketing specialist in Abu Dhabi for my startup?",
-    answer:
-      "Absolutely! Our platform excels at matching startups and companies with seasoned digital marketing professionals in Abu Dhabi for growth-driven opportunities in SEO, paid advertising, and social media.",
+    answer: (
+      <>
+        Absolutely! Our platform excels at matching startups and companies with seasoned digital
+        marketing professionals in Abu Dhabi for growth-driven opportunities in SEO, paid
+        advertising, and social media.
+      </>
+    ),
   },
   {
     question: "Do you have SEO experts and performance marketers available in Dubai and Abu Dhabi?",
-    answer:
-      "Yes, you can hire a Dubai SEO expert, an Abu Dhabi performance marketing expert, or a Google Ads professional all reviewed, results-oriented individuals.",
+    answer: (
+      <>
+        Yes, you can hire a Dubai SEO expert, an Abu Dhabi performance marketing expert, or a Google
+        Ads professional — all reviewed, results-oriented individuals.
+      </>
+    ),
   },
   {
     question: "How do I hire a freelance web designer or developer in Abu Dhabi?",
-    answer:
-      "You can search our database of Abu Dhabi freelance web designers and website developers with expertise in WordPress, custom coding, and mobile optimization development.",
+    answer: (
+      <>
+        You can search our database of Abu Dhabi freelance web designers and{" "}
+        <Link to="/Coding">website developers with expertise in WordPress</Link>, custom coding, and
+        mobile optimization development.
+      </>
+    ),
   },
   {
     question: "Which multimedia experts can I employ?",
-    answer:
-      "We give you access to Abu Dhabi and Dubai video editors, Abu Dhabi graphic designers, and Abu Dhabi freelance graphic designers for short-term or long-term creative projects.",
+    answer: (
+      <>
+        We give you access to Abu Dhabi and Dubai video editors, Abu Dhabi graphic designers, and{" "}
+        <Link to="/Multimedia">Abu Dhabi freelance graphic designers</Link> for short-term or
+        long-term creative projects.
+      </>
+    ),
   },
   {
     question: "Is your platform an outsourcing company like a BPO firm in Dubai?",
-    answer:
-      "Although we provide the same kind of flexibility, we are not a conventional BPO outsourcing firm in Dubai. We make hiring smarter and scalable via a vetted network of full-time and freelance professionals.",
+    answer: (
+      <>
+        Although we provide the same kind of flexibility, we are not a conventional BPO outsourcing
+        firm in Dubai. We make hiring smarter and scalable via a vetted network of full-time and
+        freelance professionals.
+      </>
+    ),
   },
   {
     question: "Can I hire through Hire In Abu Dhabi for remote workers or contract employees?",
-    answer:
-      "Yes! We facilitate remote hiring solutions, contract staffing firms, and companies seeking to employ remote workers for freelance projects or regular work.",
+    answer: (
+      <>
+        Yes! We facilitate <Link to="/RemoteHiring">remote hiring solutions</Link>,{" "}
+        <Link to="/AboutUs">contract staffing firms</Link>, and companies seeking to employ remote
+        workers for freelance projects or regular work.
+      </>
+    ),
   },
   {
     question: "How fast can I hire someone?",
-    answer:
-      "The majority of clients find a match within 24–48 hours. Whether you require a social media manager in Dubai, a coding expert in Abu Dhabi, or a graphic designer, we bring you on board quickly.",
+    answer: (
+      <>
+        The majority of clients find a match within 24–48 hours. Whether you require a social media
+        manager in Dubai, a coding expert in Abu Dhabi, or a graphic designer, we bring you on board
+        quickly.
+      </>
+    ),
   },
 ];
 

@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Users, Zap, TrendingUp, Target } from "lucide-react";
-
-import { useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 export default function WhyChooseInHowItWorks() {
   const features = [
@@ -98,7 +97,8 @@ export default function WhyChooseInHowItWorks() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <p className="text-xl text-gray-700 text-center mb-16 leading-relaxed">
-            In contrast to conventional BPO outsourcing providers in Dubai, we allow you to:
+            In contrast to conventional <Link to="/">BPO outsourcing providers in Dubai</Link>, we
+            allow you to:
           </p>
 
           {/* Features Grid */}
@@ -154,8 +154,8 @@ export default function WhyChooseInHowItWorks() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            Whether you need remote staffing solutions or professional freelance assistance in Abu
-            Dhabi we make it easier.
+            Whether you need <Link to="/">remote staffing solutions</Link> or professional freelance
+            assistance in Abu Dhabi we make it easier.
           </motion.p>
 
           {/* CTA Button */}

@@ -1,5 +1,6 @@
 import React from "react";
-import AboutUsHeroImage from "../../assets/Aboutus-hero.jpg";
+import AboutUsHeroImage from "../../assets/We-Are-Hiring-Hire-in-Abudhabi.webp";
+import { Link } from "react-router-dom";
 
 export default function AboutHero() {
   return (
@@ -19,11 +20,12 @@ export default function AboutHero() {
                 </span>{" "}
                 in Abu Dhabi, UAE
               </h1>
-              <p className="text-base sm:text-lg lg:text-xlleading-relaxed mb-10  max-w-2xl mx-auto lg:mx-0">
-                Hire In Abu Dhabi is a flexible talent sourcing platform in the UAE. We're here to
+              <p className="text-base sm:text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl mx-auto lg:mx-0">
+                Hire In Abu Dhabi is a{" "}
+                <Link to="/">flexible talent sourcing platform in the UAE</Link>. We're here to
                 facilitate companies, startups, and solo entrepreneurs to connect with thoroughly
-                screened digital marketing, coding, and multimedia experts.{" "}
-                <br className="hidden sm:inline" />
+                screened <Link to="/">digital marketing, coding, and multimedia experts</Link>
+                . <br className="hidden sm:inline" />
                 We're not a conventional BPO. We provide more intelligent, flexible hiring
                 freelance, part-time, or full-time.
               </p>
@@ -38,18 +40,17 @@ export default function AboutHero() {
                   className="relative inline-flex items-center justify-center gap-3 px-6 py-3 text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105 overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-green-400 rounded-full opacity-0 hover:opacity-50 transition-opacity duration-300 transform scale-0 hover:scale-150 origin-center"></div>
-                  {/* <FaWhatsapp className="text-lg z-10" /> */}
                   <span className="z-10">Hire now</span>
                 </a>
               </button>
             </div>
 
-            {/* Image Section (Cleaned Up) */}
+            {/* Image Section */}
             <div className="flex justify-center lg:justify-end">
               <img
                 src={AboutUsHeroImage}
-                alt="Team collaborating remotely in Abu Dhabi"
-                className="rounded-2xl shadow-xl object-contain max-h-[400px] "
+                alt="We Are Hiring in Dubai | Recruitment, Staffing, Outsourcing & BPO Companies UAE | IT Outsourcing Companies in Dubai"
+                className="rounded-2xl shadow-xl object-contain max-h-[400px]"
               />
             </div>
           </div>

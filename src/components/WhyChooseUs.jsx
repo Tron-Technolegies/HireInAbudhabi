@@ -155,7 +155,17 @@ export default function WhyChooseUs() {
   const reasons = [
     {
       title: "100% Vetted Talent Only",
-      text: `No expert is outsourced without a rigid screening and interviewing procedure, portfolio verification, and background checks to ensure the select few listed are genuine and deserving candidates. A digital marketing expert in Abu Dhabi, a website developer, and a graphic design expert are all vetted.`,
+      text: (
+        <>
+          No expert is outsourced without a rigid screening and interviewing procedure, portfolio
+          verification, and background checks to ensure the select few listed are genuine and
+          deserving candidates. A{" "}
+          <Link to="/Digitalmarketing" className="hover:underline">
+            digital marketing expert in Abu Dhabi
+          </Link>
+          , a website developer, and a graphic design expert are all vetted.
+        </>
+      ),
       icon: <ShieldCheck className="text-green-400 w-6 h-6" />,
     },
     {
@@ -170,12 +180,29 @@ export default function WhyChooseUs() {
     },
     {
       title: "Better than the Traditional Outsourcing",
-      text: `Unlike BPO outsourcing companies in Dubai, we give you full control and flexibility. No middlemen. No fixed retainers. You hire directly and only pay for what you need.`,
+      text: (
+        <>
+          Unlike{" "}
+          <Link to="/" className="hover:underline">
+            BPO outsourcing companies in Dubai
+          </Link>
+          , we give you full control and flexibility. No middlemen. No fixed retainers. You hire
+          directly and only pay for what you need.
+        </>
+      ),
       icon: <ArrowRightLeft className="text-green-400 w-6 h-6" />,
     },
     {
       title: "Remote Staffing, Made Local",
-      text: `Looking to hire remote employees in the UAE? Our network includes remote-ready professionals so you get flexibility`,
+      text: (
+        <>
+          Looking to{" "}
+          <Link to="/" className="hover:underline">
+            hire remote employees in the UAE
+          </Link>
+          ? Our network includes remote-ready professionals so you get flexibility
+        </>
+      ),
       icon: <Globe className="text-green-400 w-6 h-6" />,
     },
     {
@@ -198,9 +225,9 @@ export default function WhyChooseUs() {
 
         {/* Description */}
         <p className="text-gray-300 text-center mb-20 max-w-4xl mx-auto">
-          At Hire In Abu Dhabi; we are much more than just an outsourcing platform. We work in
-          partnership with talent for UAE-based businesses, startups, and creators. This is why
-          hundreds of companies still hire through us:
+          At Hire In Abu Dhabi we are much more than just an <Link to="/">outsourcing service</Link>
+          platform. We work in partnership with talent for UAE-based businesses, startups, and
+          creators. This is why hundreds of companies still hire through us:
         </p>
 
         {/* Grid of Reasons */}
