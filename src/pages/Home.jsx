@@ -23,7 +23,20 @@ export default function Home() {
         <title>Hire Vetted Marketing, Coding & Multimedia Experts in Abu Dhabi, UAE</title>
         <meta
           name="description"
-          content="Hire top digital marketing, coding, and multimedia experts in Abu Dhabi. Find vetted freelance, part-time, or full-time talent ready to deliver results today."
+          content="Connect with expert digital marketing, coding, and multimedia talent in Abu Dhabi, UAE. Hire freelance, part-time, or full-time specialists for reliable results."
+        />
+        <meta
+          name="keywords"
+          content="bpo outsourcing companies in dubai,
+IT outsourcing companies in dubai,
+staff outsourcing companies in dubai,
+freelance outsourcing platforms abu dhabi,
+outsourcing services,
+remote staffing solutions,
+hr outsourcing providers,
+hire remote employees,
+contract staffing solutions,
+contract staffing companies"
         />
         <link rel="canonical" href="https://hireinabudhabi.com/" />
       </Helmet>

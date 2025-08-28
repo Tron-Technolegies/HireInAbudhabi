@@ -196,7 +196,7 @@ export default function Testimonials() {
     {
       title: "Highly Skilled & Communicative",
       comment:
-        "The freelance front-end developer was hired for 3-months; his attention to detail and responsiveness made the experience seamless. Hire in Abu Dhabi has now become our Go-To platform for vetted tech talent.",
+        "The  freelance front-end developer was hired for 3-months; his attention to detail and responsiveness made the experience seamless. Hire in Abu Dhabi has now become our Go-To platform for vetted tech talent.",
       name: "Khaled Mustafa",
       company: " Product Manager",
       image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg",

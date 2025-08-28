@@ -22,7 +22,7 @@ export default function Footer() {
     { icon: FacebookIcon, url: "https://www.facebook.com/HireinAbudhabi" },
     { icon: TwitterIcon, url: "https://x.com/HireinAbuDhabi" },
     { icon: InstagramIcon, url: "https://www.instagram.com/hireinabudhabi/" },
-    { icon: LinkedinIcon, url: "#" },
+    { icon: LinkedinIcon, url: "https://www.linkedin.com/company/hireinabudhabi/" },
   ];
 
   const navigate = useNavigate();

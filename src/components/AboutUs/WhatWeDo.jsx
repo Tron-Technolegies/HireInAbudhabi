@@ -73,7 +73,7 @@ export default function WhatWeDo() {
             </div>
             <p className="text-gray-600 leading-relaxed">
               Get delivery, quality, and deadlines with our oversight service. We manage freelance
-              and part-time work so that you can stay on pace — without the anxiety.
+              and part-time work so that you can stay on pace without the anxiety.
             </p>
           </div>
 

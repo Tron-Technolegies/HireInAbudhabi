@@ -55,6 +55,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function BottomSection() {
   return (
@@ -65,8 +66,9 @@ export default function BottomSection() {
           Hire with Confidence.
         </h2>
         <p className=" text-gray-600">
-          Access a talent pool of qualified digital marketing, coding, and multimedia experts in Abu
-          Dhabi. <br /> Match with the ideal professionals, freelance to full-time quickly.
+          Access a talent pool of qualified{" "}
+          <Link to="/">, digital marketing, coding, and multimedia experts in Abu Dhabi </Link>.{" "}
+          <br /> Match with the ideal professionals, freelance to full-time quickly.
         </p>
 
         <motion.div
