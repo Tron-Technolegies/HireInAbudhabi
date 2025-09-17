@@ -115,10 +115,10 @@ export default function Footer() {
                 <div className="flex items-center">
                   <Mail className="w-5 h-5 mr-2 text-green-600 flex-shrink-0" />
                   <a
-                    href="mailto:hireinabudhabi@gmail.com"
+                    href="mailto:info@hireinabudhabi.com"
                     className="hover:text-green-600 transition-colors duration-200 text-gray-600"
                   >
-                    Hireinmarketing@gmail.com
+                    info@hireinabudhabi.com
                   </a>
                 </div>
               </li>

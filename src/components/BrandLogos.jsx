@@ -12,6 +12,8 @@ import tikkatonight from "../assets/logos/TikkaTonight.webp";
 import goldengate from "../assets/logos/GoldenGate.webp";
 import handcar from "../assets/logos/Handcar.webp";
 import sariah from "../assets/logos/Sariah.webp";
+import signature from "../assets/logos/Signature.webp";
+import { img } from "framer-motion/client";
 
 export default function BrandLogos() {
   const topRowLogos = [
@@ -75,6 +77,11 @@ export default function BrandLogos() {
       name: "HandCar",
       img: handcar,
       alt: "Handacar Logo | BPO Outsourcing Companies in Dubai",
+    },
+    {
+      name: "Signature D World",
+      img: signature,
+      alt: "Signature D World Logo | HR Outsourcing Providers",
     },
   ];
 

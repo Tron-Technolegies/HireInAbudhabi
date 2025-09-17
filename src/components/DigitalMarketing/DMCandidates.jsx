@@ -1,40 +1,58 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { ChevronLeft, ChevronRight, MapPin, MessageCircle } from "lucide-react";
 
-// Import your local images here.
-// Make sure these paths are correct relative to this file.
-// import gokulImage from "./assets/gokul.jpg";
-// import abdulRaufImage from "./assets/abdul_rauf.jpg";
-// import dilnaFathimaImage from "./assets/dilna_fathima.jpg";
-// import jabirJafferImage from "./assets/jabir_jaffer.jpg";
-// import rizwanShamsudheenImage from "./assets/rizwan_shamsudheen.jpg";
-// import muhammedShameerImage from "./assets/muhammed_shameer.jpg";
-// import yasimImage from "./assets/yasim.jpg";
-// import muhammedIrshadImage from "./assets/muhammed_irshad.jpg";
-// import adarshDileepImage from "./assets/adarsh_dileep.jpg";
-
 const dmCandidates = [
-  { name: "Gokul SP", role: "Performance Marketer", category: "DM" },
-  { name: "Abdul Rauf", role: "SEO Specialist", category: "DM" },
-  { name: "Dilna Fathima", role: "Project Manager", category: "DM" },
-  { name: "Jabir Jaffer", role: "Project Manager", category: "DM" },
   {
-    name: "Rizwan Shamsudheen",
-    role: "Project Manager",
-    category: "DM",
+    id: 1,
+    name: "Muhammed Hashim",
+    position: "SEO Specialist",
+    skills: ["SEO", "Wordpress", "Social Media", "Performance Marketing", "Content writing"],
+    description: "Passionate about growing brands online with SEO strategies.",
+    photo: "/photos/digital-marketing/Muhammed-Hashim-Photo.webp",
+    alt: "Muhammed Hashim - SEO Specialist at Hire in Abu Dhabi | Digital Marketer in UAE",
+    resume: "/resumes/digital-marketing/Muhammed-Hashim-Resume.pdf",
   },
   {
+    id: 2,
     name: "Muhammed Shameer",
-    role: "SEO Specialist",
-    category: "DM",
+    position: "Social Media Manager",
+    skills: ["Wordpress", "SEO", "Performance Marketing", "Social Media", "TikTok Ads"],
+    description: "Expert in building engaging communities on social media.",
+    photo: "/photos/digital-marketing/Muhammed-Shameer-Photo.webp",
+    alt: "Muhammed Shameer - Social Media Manager in UAE",
+    resume: "/resumes/digital-marketing/Muhammed-Shameer-Resume.pdf",
   },
-  { name: "Yasim", role: "Project Manager", category: "DM" },
   {
-    name: "Muhammed Irshad PM",
-    role: "Project Manager",
-    category: "DM",
+    id: 3,
+    name: "Dheeraj M R",
+    position: "Content Strategist",
+    skills: ["Google Ads", "Meta Ads", "Canva", "SEO", "Social Media"],
+    description: "Strategic thinker with expertise in content-driven growth.",
+    photo: "/photos/digital-marketing/Dheeraj-M-R-Photo.webp",
+    alt: "Dheeraj M R - Content Strategist in UAE",
+    resume: "/resumes/digital-marketing/Dheeraj-M-R-Resume.pdf",
   },
-  { name: "Adarsh Dileep", role: "Project Manager", category: "DM" },
+  {
+    id: 4,
+    name: "Riyas Abubacker",
+    position: "Digital Marketing Specialist",
+    skills: ["Google Ads", "Meta Ads", "SEO", "Wordpress", "Canva"],
+    description:
+      "Creative marketer leveraging SEO and digital channels to deliver measurable impact",
+    photo: "/photos/digital-marketing/Riyas-Abubacker-Photo.webp",
+    alt: "Riyas Abubacker - PPC Specialist in UAE",
+    resume: "/resumes/digital-marketing/Riyas-Abubacker-Resume.pdf",
+  },
+  {
+    id: 5,
+    name: "Shinas AR",
+    position: "Digital Marketing Analyst",
+    skills: ["SEO", "Performance Marketing", "Content writing", "Wordpress", "Social Media"],
+    description: "Analytical expert who uses data to optimize marketing outcomes.",
+    photo: "/photos/digital-marketing/Shinas-AR-Photo.webp",
+    alt: "Shinas AR - Digital Marketing Analyst in UAE",
+    resume: "/resumes/digital-marketing/Shinas-AR-Resume.pdf",
+  },
 ];
 
 export default function DMCandidates() {
@@ -47,18 +65,6 @@ export default function DMCandidates() {
     return dmCandidates.map((candidate, index) => ({
       id: index,
       ...candidate,
-      experience: "1+ years",
-      location: "UAE",
-      // image: candidate.localImage, // Use the imported local image - COMMENTED OUT
-      // Fallback for demonstration when local images are not used
-      image: `https://randomuser.me/api/portraits/men/${20 + index}.jpg`,
-      bio: "A highly motivated and results-driven individual passionate about digital marketing strategies and project execution.",
-      // Updated skills based on roles for DM candidates
-      skills: candidate.role.includes("Performance Marketer")
-        ? ["Google Ads", "Facebook Ads", "Analytics", "SEM"]
-        : candidate.role.includes("SEO Specialist")
-        ? ["SEO", "Keyword Research", "Content Strategy", "Link Building"]
-        : ["Project Management", "Agile", "Scrum", "Communication", "Team Leadership"],
     }));
   }, []);
 
@@ -156,7 +162,7 @@ export default function DMCandidates() {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * (100 / cardsPerPage)}%)` }}
             >
-              {candidates.map((candidate) => (
+              {dmCandidates.map((candidate) => (
                 <div
                   key={candidate.id}
                   className={`flex-shrink-0  px-2 sm:px-3 mb-6 sm:mb-6 ${
@@ -171,9 +177,9 @@ export default function DMCandidates() {
                         <div className="relative">
                           <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden shadow-lg ring-2 ring-white">
                             <img
-                              src={candidate.image}
-                              alt={candidate.name}
-                              className="w-full h-full object-cover"
+                              src={candidate.photo}
+                              alt={candidate.alt}
+                              className="w-full h-full object-center"
                             />
                           </div>
                         </div>
@@ -186,18 +192,12 @@ export default function DMCandidates() {
                             {candidate.name}
                           </h3>
                           <p className="text-gray-700 font-semibold text-sm sm:text-base mb-1">
-                            {candidate.role}
+                            {candidate.position}
                           </p>
-                          <div className="flex items-center justify-center text-gray-500 text-xs sm:text-sm">
-                            <MapPin className="w-3 h-3 mr-1" />
-                            <span>
-                              {candidate.location} • {candidate.experience}
-                            </span>
-                          </div>
                         </div>
 
                         <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-5">
-                          {candidate.bio}
+                          {candidate.description}
                         </p>
 
                         {/* Skills */}
@@ -221,33 +221,48 @@ export default function DMCandidates() {
 
                     {/* Action Buttons - Now at bottom */}
                     <div className="p-4 sm:p-6 pt-0 mt-auto">
-                      <div className="flex flex-col gap-2 w-full">
-                        <button
-                          onClick={() => selectCandidate(candidate)}
-                          className={`w-full py-2.5 sm:py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
-                            selectedCandidate?.id === candidate.id
-                              ? "bg-gray-900 text-white shadow-lg"
-                              : "bg-white text-gray-700 hover:bg-gray-50 shadow-lg border-2 border-gray-200 hover:border-gray-400"
-                          }`}
-                        >
-                          {selectedCandidate?.id === candidate.id
-                            ? "✓ Selected"
-                            : "Select Candidate"}
-                        </button>
-
-                        {selectedCandidate?.id === candidate.id && (
-                          <a
-                            href={`https://wa.me/971568145866?text=${whatsappMessage(
-                              candidate.name
-                            )}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-2 w-full py-2.5 sm:py-3 bg-green-500 text-white rounded-full font-semibold text-sm hover:bg-green-600 transition-all duration-300 shadow-lg animate-in slide-in-from-bottom-2 duration-200"
+                      {/* Action Buttons */}
+                      <div className="p-4 sm:p-6 pt-0 mt-auto">
+                        <div className="flex flex-col gap-2 w-full">
+                          <button
+                            onClick={() => selectCandidate(candidate)}
+                            className={`w-full py-2.5 sm:py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
+                              selectedCandidate?.id === candidate.id
+                                ? "bg-gray-900 text-white shadow-lg"
+                                : "bg-white text-gray-700 hover:bg-gray-50 shadow-lg border-2 border-gray-200 hover:border-gray-400"
+                            }`}
                           >
-                            <MessageCircle className="w-4 h-4" />
-                            Hire Now
-                          </a>
-                        )}
+                            {selectedCandidate?.id === candidate.id
+                              ? "✓ Selected"
+                              : "Select Candidate"}
+                          </button>
+
+                          {selectedCandidate?.id === candidate.id && (
+                            <>
+                              {/* WhatsApp Hire Button */}
+                              <a
+                                href={`https://wa.me/971568145866?text=${whatsappMessage(
+                                  candidate.name
+                                )}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center gap-2 w-full py-2.5 sm:py-3 bg-green-500 text-white rounded-full font-semibold text-sm hover:bg-green-600 transition-all duration-300 shadow-lg animate-in slide-in-from-bottom-2 duration-200"
+                              >
+                                <MessageCircle className="w-4 h-4" />
+                                Hire Now
+                              </a>
+
+                              {/* Download Resume Button */}
+                              <a
+                                href={candidate.resume}
+                                download={`${candidate.name}-Resume.pdf`}
+                                className="w-full py-2.5 sm:py-3 text-center bg-blue-600 text-white rounded-full font-semibold text-sm hover:bg-blue-700 transition-all duration-300 shadow-lg"
+                              >
+                                Download Resume
+                              </a>
+                            </>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
