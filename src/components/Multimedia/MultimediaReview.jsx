@@ -26,7 +26,7 @@ export default function MultimediaReview() {
       position: "Marketing Lead",
       review:
         "With multimedia talent from Hire in Abu Dhabi, Lebanese Mill Restaurant showcased its authentic flavors through engaging visuals and videos making the brand more appealing and memorable to customers.",
-      author: "— Noor, CMO",
+      author: "— Abdullah, CMO",
       website: "https://lebanesemill.ae/",
     },
   ];

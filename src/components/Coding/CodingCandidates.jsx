@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { ChevronLeft, ChevronRight, MapPin, MessageCircle } from "lucide-react";
 
-// Local images
-import abinImage from "../../assets/Yadu.jpg";
-
 const codingCandidates = [
-  { name: "Abin Joshy", role: "Data Scientist", category: "Coding", localImage: abinImage },
-  { name: "Rishad", role: "MERN Stack Developer", category: "Coding" },
-  { name: "Jalal", role: "Python Full Stack Developer", category: "Coding" },
-  { name: "Sanjay", role: "Python Full Stack Developer", category: "Coding" },
-  { name: "Krishnadev", role: "Python Full Stack Developer", category: "Coding" },
+  {
+    id: 1,
+    name: "SanjayDas P S",
+    position: "Python Full Stack Developer",
+    skills: ["Python", "Django", "HTML", "CSS", "JavaScript", "React"],
+    description: "Python Full Stack Developer with expertise in Django and React.",
+    photo: "/photos/coding/Sanjaydas-Photo.webp",
+    alt: "Sanjaydas P S - Python Full Stack Developer Photo | Coding experts in abu dhabi",
+    resume: "/resumes/coding/Sanjaydas-P-S-resume.pdf",
+  },
 ];
 
 export default function CodingCandidates() {
@@ -22,15 +24,6 @@ export default function CodingCandidates() {
     return codingCandidates.map((candidate, index) => ({
       id: index,
       ...candidate,
-      experience: "1+ years",
-      location: "UAE",
-      image: candidate.localImage || `https://randomuser.me/api/portraits/men/${20 + index}.jpg`,
-      bio: "Built scalable full-stack solutions with modern technologies",
-      skills: candidate.role.includes("Data")
-        ? ["Machine Learning", "Python", "TensorFlow", "Data Analysis"]
-        : candidate.role.includes("MERN")
-        ? ["MongoDB", "Express", "React", "Node.js"]
-        : ["Python", "Django", "PostgreSQL", "Docker"],
     }));
   }, []);
 
@@ -68,15 +61,15 @@ export default function CodingCandidates() {
 
   const whatsappMessage = (name) =>
     encodeURIComponent(
-      `Hi! I'm interested in hiring ${name} for a coding position. Can we discuss further?`
+      `Hi! I'm interested in hiring ${name} for a Coding position. Can we discuss further?`
     );
 
   return (
-    <section className="py-12 sm:py-16 bg-white ">
+    <section className="py-8 sm:py-12 lg:py-16 bg-white lg:min-h-screen">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-3 sm:mb-4">
             Our <span className="">Coding Experts</span>
           </h2>
           <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
@@ -118,13 +111,13 @@ export default function CodingCandidates() {
                   }`}
                 >
                   <div className="bg-white rounded-2xl shadow-lg border border-gray-200 h-auto flex flex-col overflow-hidden">
+                    {/* Profile */}
                     <div className="p-4 sm:p-6 flex-1 flex flex-col">
-                      {/* Profile */}
                       <div className="flex justify-center mb-4">
                         <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden shadow-lg ring-2 ring-white">
                           <img
-                            src={candidate.image}
-                            alt={candidate.name}
+                            src={candidate.photo}
+                            alt={candidate.alt}
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -134,38 +127,39 @@ export default function CodingCandidates() {
                           {candidate.name}
                         </h3>
                         <p className="text-gray-700 font-semibold text-sm sm:text-base">
-                          {candidate.role}
+                          {candidate.position}
                         </p>
-                        <div className="flex items-center justify-center text-gray-500 text-xs sm:text-sm">
+                        {/* <div className="flex items-center justify-center text-gray-500 text-xs sm:text-sm">
                           <MapPin className="w-3 h-3 mr-1" />
                           <span>
                             {candidate.location} • {candidate.experience}
                           </span>
-                        </div>
-                        <p className="text-gray-600 text-xs sm:text-sm">{candidate.bio}</p>
-                        <div>
-                          <h4 className="text-xs font-semibold text-gray-700 mb-2">
-                            Technical Expertise
-                          </h4>
-                          <div className="flex flex-wrap gap-1 justify-center">
-                            {candidate.skills.map((skill, i) => (
-                              <span
-                                key={i}
-                                className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs font-medium"
-                              >
-                                {skill}
-                              </span>
-                            ))}
-                          </div>
+                        </div> */}
+                        <p className="text-gray-600 text-xs sm:text-sm">{candidate.description}</p>
+
+                        {/* Skills */}
+                        <h4 className="text-xs font-semibold text-gray-700 mb-2">
+                          Technical Expertise
+                        </h4>
+                        <div className="flex flex-wrap gap-1 justify-center">
+                          {candidate.skills.map((skill, i) => (
+                            <span
+                              key={i}
+                              className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs font-medium"
+                            >
+                              {skill}
+                            </span>
+                          ))}
                         </div>
                       </div>
                     </div>
-                    {/* Actions */}
+
+                    {/* Actions (same as DM) */}
                     <div className="p-4 sm:p-6 pt-0 mt-auto">
                       <div className="flex flex-col gap-2 w-full">
                         <button
                           onClick={() => selectCandidate(candidate)}
-                          className={`w-full py-2.5 rounded-full font-semibold text-sm transition-all duration-300 ${
+                          className={`w-full py-2.5 sm:py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
                             selectedCandidate?.id === candidate.id
                               ? "bg-gray-900 text-white shadow-lg"
                               : "bg-white text-gray-700 hover:bg-gray-50 shadow-lg border-2 border-gray-200 hover:border-gray-400"
@@ -175,17 +169,29 @@ export default function CodingCandidates() {
                             ? "✓ Selected"
                             : "Select Candidate"}
                         </button>
+
                         {selectedCandidate?.id === candidate.id && (
-                          <a
-                            href={`https://wa.me/971568145866?text=${whatsappMessage(
-                              candidate.name
-                            )}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-2 w-full py-2.5 bg-green-500 text-white rounded-full font-semibold text-sm hover:bg-green-600 transition-all duration-300 shadow-lg"
-                          >
-                            <MessageCircle className="w-4 h-4" /> Hire Now
-                          </a>
+                          <>
+                            <a
+                              href={`https://wa.me/971501234567?text=${whatsappMessage(
+                                candidate.name
+                              )}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center justify-center gap-2 w-full py-2.5 sm:py-3 bg-green-500 text-white rounded-full font-semibold text-sm hover:bg-green-600 transition-all duration-300 shadow-lg"
+                            >
+                              <MessageCircle className="w-4 h-4" />
+                              Hire Now
+                            </a>
+
+                            <a
+                              href={candidate.resume}
+                              download={`${candidate.name}-Resume.pdf`}
+                              className="w-full py-2.5 sm:py-3 text-center bg-blue-600 text-white rounded-full font-semibold text-sm hover:bg-blue-700 transition-all duration-300 shadow-lg"
+                            >
+                              Download Resume
+                            </a>
+                          </>
                         )}
                       </div>
                     </div>
@@ -214,7 +220,7 @@ export default function CodingCandidates() {
             </button>
           </div>
 
-          {/* Dots indicator for larger screens */}
+          {/* Dots indicator */}
           <div className="hidden sm:flex justify-center mt-10 gap-3">
             {candidates.map((_, i) => (
               <button

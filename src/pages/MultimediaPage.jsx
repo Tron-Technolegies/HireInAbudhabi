@@ -16,7 +16,7 @@ export default function MultimediaPage() {
         <title>Top Graphic Designers & Video Editors in Abu Dhabi | Hire Experts</title>
         <meta
           name="description"
-          content="Hire expert graphic designers and video editors in Abu Dhabi for branding, social media, ads, and more. Vetted creatives ready to bring your vision to life."
+          content="Hire expert graphic designers and video editors in Abu Dhabi for branding, social media, ads and more. Vetted creatives ready to bring your vision to life."
         />
         <meta
           name="keywords"
