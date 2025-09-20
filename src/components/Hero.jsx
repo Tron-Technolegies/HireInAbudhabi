@@ -59,8 +59,8 @@ export default function Hero() {
         >
           <div className="relative mx-auto max-w-xs sm:max-w-sm md:max-w-md">
             <img
-              src="https://cdn.prod.website-files.com/5ec70e2719e95acb889006a3/67f576f510f6e2f15a80e8c9_hero%20marketer%20card%202%20(1).webp"
-              alt="Marketing Experts"
+              src="/Hero-img.webp"
+              alt="Team profiles featuring Nahala, Digital Marketing Specialist; Shafi, MERN Stack Developer; and Faheem, Multimedia Specialist | IT Outsourcing Company in Abu Dhabi, UAE"
               className="w-full"
               loading="lazy"
             />
