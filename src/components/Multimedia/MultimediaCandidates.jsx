@@ -8,12 +8,34 @@ const multimediaCandidates = [
     position: "Media professional and Filmmaker",
     skills: ["Photoshop", "Premiere Pro", "After Effects", "Davinci", "Lightroom", "Ableton"],
     description:
-      "Passionate about filmmaking and creative storytelling. With over 4 years of hands-on experience in the media industry.",
+      "Focused on filmmaking and storytelling, with 4+ years of hands on media industry experience.",
     photo: "/photos/multimedia/Sabari-Vinod-Photo.webp",
-    alt: "Sabari Vinod - Media professional and Filmmaker in UAE",
+    alt: "Sabari Vinod Photo | video editor in dubai",
     resume: "/resumes/multimedia/Sabari-Vinod-Portfolio.pdf",
     // location: "Dubai",
     // experience: "4+ Years",
+  },
+  {
+    id: 2,
+    name: "Nishad VM",
+    position: "UI UX Designer",
+    skills: ["Photoshop", "Figma", "Adobe XD", "Adobe Illustrator"],
+    description:
+      "Designs intuitive user experiences and visually engaging interfaces for digital products",
+    photo: "/photos/multimedia/Nishad-VM-Photo.webp",
+    alt: "Nishad Photo | Graphic Designer in Abu Dhabi",
+    resume: "/resumes/multimedia/Nishad-VM-Resume.pdf",
+  },
+  {
+    id: 3,
+    name: "Mohammed Nahil",
+    position: "UI/UX Designer",
+    skills: ["Photoshop", "Figma", "Adobe XD", "Adobe Illustrator"],
+    description:
+      "Crafts user centered designs that enhance functionality, usability, and visual appeal.",
+    photo: "/photos/multimedia/Mohammed-Nahil-Photo.webp",
+    alt: "Mohammed Nahil Photo | freelance graphic designer abu dhabi",
+    resume: "/resumes/multimedia/Mohammed-Nahil-Resume.pdf",
   },
 ];
 
@@ -120,7 +142,7 @@ export default function MultimediaCandidates() {
                           <img
                             src={candidate.photo}
                             alt={candidate.alt}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain"
                           />
                         </div>
                       </div>
