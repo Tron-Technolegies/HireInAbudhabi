@@ -6,11 +6,41 @@ const codingCandidates = [
     id: 1,
     name: "SanjayDas P S",
     position: "Python Full Stack Developer",
-    skills: ["Python", "Django", "HTML", "CSS", "JavaScript", "React"],
-    description: "Python Full Stack Developer with expertise in Django and React.",
+    skills: [
+      "Python",
+      "Django",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "PostgreSQL",
+      "Github",
+      "AWS",
+    ],
+    description: "Builds scalable web applications using Python for both front-end and back-end",
     photo: "/photos/coding/Sanjaydas-Photo.webp",
     alt: "Sanjaydas P S - Python Full Stack Developer Photo | Coding experts in abu dhabi",
     resume: "/resumes/coding/Sanjaydas-P-S-resume.pdf",
+  },
+  {
+    id: 2,
+    name: "Jalaludheen C",
+    position: "Python Developer",
+    skills: [
+      "Python",
+      "Django",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "PostgreSQL",
+      "Github",
+      "AWS",
+    ],
+    description: "Creates full-stack applications with Python,user and server-side performance",
+    photo: "/photos/coding/Jalaludheen-C-Photo.webp",
+    alt: "Jalaludheen C Photo | website developer in abudhabi",
+    resume: "/resumes/coding/Jalaludheen-C-resume.pdf",
   },
 ];
 
@@ -118,7 +148,7 @@ export default function CodingCandidates() {
                           <img
                             src={candidate.photo}
                             alt={candidate.alt}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain"
                           />
                         </div>
                       </div>
