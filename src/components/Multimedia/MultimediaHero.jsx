@@ -1,6 +1,7 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { handleChatClickCustom } from "../../utils/whatsapp";
 
 export default function MultimediaHero() {
   return (
@@ -16,21 +17,26 @@ export default function MultimediaHero() {
           {/* Paragraph */}
           <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto px-2">
             From scroll-stopping graphics to stunning video edits our{" "}
-            <Link to="/Multimedia">Graphic Designers & Video Editors in Abu Dhabi</Link>, UAE.
-            Crafted visuals that elevate your brand with elegance and impact.
+            <Link to="/Multimedia">
+              Graphic Designers & Video Editors in Abu Dhabi
+            </Link>
+            , UAE. Crafted visuals that elevate your brand with elegance and
+            impact.
           </p>
 
           {/* Button */}
           <div className="flex justify-center">
-            <a
-              href="https://wa.me/971568145866"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() =>
+                handleChatClickCustom(
+                  "Hello, I'm interested in your Multimedia services.",
+                )
+              }
               className="relative inline-flex items-center justify-center gap-2 px-5 py-3 text-sm sm:text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105 overflow-hidden"
             >
               <div className="absolute inset-0 bg-green-400 rounded-full opacity-0 hover:opacity-50 transition-opacity duration-300 transform scale-0 hover:scale-150 origin-center"></div>
               <span className="z-10">Hire now</span>
-            </a>
+            </button>
           </div>
         </div>
       </div>

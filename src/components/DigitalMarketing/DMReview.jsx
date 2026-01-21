@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import {
+  MdOutlineKeyboardArrowRight,
+  MdOutlineKeyboardArrowLeft,
+} from "react-icons/md";
 import goldengate from "../../assets/logos/GoldenGate.webp";
 import sariah from "../../assets/logos/Sariah.webp";
+import { handleChatClickCustom } from "../../utils/whatsapp";
 
 export default function DMReview() {
   const [currentReview, setCurrentReview] = useState(0);
@@ -31,8 +35,10 @@ export default function DMReview() {
     },
   ];
 
-  const nextReview = () => setCurrentReview((prev) => (prev + 1) % reviews.length);
-  const prevReview = () => setCurrentReview((prev) => (prev - 1 + reviews.length) % reviews.length);
+  const nextReview = () =>
+    setCurrentReview((prev) => (prev + 1) % reviews.length);
+  const prevReview = () =>
+    setCurrentReview((prev) => (prev - 1 + reviews.length) % reviews.length);
 
   return (
     <section className="bg-white py-8 lg:py-12">
@@ -49,10 +55,17 @@ export default function DMReview() {
               <p className="text-base sm:text-lg lg:text-lg xl:text-xl text-black leading-relaxed">
                 Great results? It's who you hire, not what you use.{" "}
                 <br className="hidden sm:block" />
-                Forget the gimmicks meet the marketers who make real magic happen. See why our
-                partners keep coming back.
+                Forget the gimmicks meet the marketers who make real magic
+                happen. See why our partners keep coming back.
               </p>
-              <button className="bg-black rounded-full text-white px-6 sm:px-8 py-3 sm:py-4 font-bold text-base sm:text-lg hover:bg-gray-800 transition-colors duration-300">
+              <button
+                onClick={() =>
+                  handleChatClickCustom(
+                    "Hello, I'm interested in your digital marketing services.",
+                  )
+                }
+                className="bg-black rounded-full text-white px-6 sm:px-8 py-3 sm:py-4 font-bold text-base sm:text-lg hover:bg-gray-800 transition-colors duration-300"
+              >
                 Browse for Experts
               </button>
             </div>

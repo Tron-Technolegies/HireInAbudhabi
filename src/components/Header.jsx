@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { handleChatClick } from "../utils/whatsapp";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -110,14 +111,12 @@ export default function Header() {
                 </Link>
               ))}
 
-            <a
-              href="https://wa.me/971568145866"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105"
+            <button
+              onClick={handleChatClick}
+              className="px-4 cursor-pointer py-2 text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105"
             >
               Talk Now
-            </a>
+            </button>
           </nav>
         )}
 

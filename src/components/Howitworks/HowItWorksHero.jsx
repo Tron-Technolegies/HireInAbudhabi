@@ -1,5 +1,6 @@
 import React from "react";
 import { Users, Search, Shield, Award } from "lucide-react";
+import { handleChatClick } from "../../utils/whatsapp";
 
 export default function HowItWorksHero() {
   // Vetting process data is no longer strictly needed in this format
@@ -28,21 +29,24 @@ export default function HowItWorksHero() {
           <div className="space-y-8">
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify">
               <p>
-                Our expert selection process is thoughtfully designed to deliver the best standards
-                of quality. We ourselves choose experts from India's best institutions and outside
-                India as well, not only based on their school performance but also on their
-                work-experience, business skills, and solution-processing abilities.
+                Our expert selection process is thoughtfully designed to deliver
+                the best standards of quality. We ourselves choose experts from
+                India's best institutions and outside India as well, not only
+                based on their school performance but also on their
+                work-experience, business skills, and solution-processing
+                abilities.
               </p>
 
               <p>
-                Every candidate undergoes a multi-step assessment consisting of intensive skill
-                tests, one-on-one interviews, and performance tests in order to sift the
-                professionals to feature in our pool.
+                Every candidate undergoes a multi-step assessment consisting of
+                intensive skill tests, one-on-one interviews, and performance
+                tests in order to sift the professionals to feature in our pool.
               </p>
 
               <p>
-                By hiring through us, you get to work with pre-screened professionals who provide
-                quality and reliability as nobody else does.
+                By hiring through us, you get to work with pre-screened
+                professionals who provide quality and reliability as nobody else
+                does.
               </p>
             </div>
           </div>
@@ -50,7 +54,9 @@ export default function HowItWorksHero() {
           {/* Right Column - Vetting List */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">We Vetted via:</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                We Vetted via:
+              </h2>
 
               {/* Vetting List in a 2x2 grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -61,7 +67,9 @@ export default function HowItWorksHero() {
                       <Users className="w-5 h-5 text-white" />
                     </div>
                   </div>
-                  <span className="text-lg font-medium text-gray-800">Interviews</span>
+                  <span className="text-lg font-medium text-gray-800">
+                    Interviews
+                  </span>
                 </div>
 
                 {/* Portfolio Assessments Box */}
@@ -71,7 +79,9 @@ export default function HowItWorksHero() {
                       <Award className="w-5 h-5 text-white" />
                     </div>
                   </div>
-                  <span className="text-lg font-medium text-gray-800">Portfolio assessments</span>
+                  <span className="text-lg font-medium text-gray-800">
+                    Portfolio assessments
+                  </span>
                 </div>
 
                 {/* Deep Background Checks Box */}
@@ -81,7 +91,9 @@ export default function HowItWorksHero() {
                       <Shield className="w-5 h-5 text-white" />
                     </div>
                   </div>
-                  <span className="text-lg font-medium text-gray-800">Deep background checks</span>
+                  <span className="text-lg font-medium text-gray-800">
+                    Deep background checks
+                  </span>
                 </div>
 
                 {/* Strong Referral Networks Box */}
@@ -108,11 +120,13 @@ export default function HowItWorksHero() {
           <p className="text-lg text-gray-600 mb-6">
             Experience the difference of working with thoroughly vetted experts
           </p>
-          <a href="https://wa.me/971568145866" target="_blank" rel="noopener noreferrer">
-            <button className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200">
-              Get Started Today
-            </button>
-          </a>
+
+          <button
+            onClick={handleChatClick}
+            className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+          >
+            Get Started Today
+          </button>
         </div>
       </div>
     </div>

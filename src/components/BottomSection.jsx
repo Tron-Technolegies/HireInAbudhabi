@@ -56,6 +56,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { handleChatClickCustom } from "../utils/whatsapp";
 
 export default function BottomSection() {
   return (
@@ -67,8 +68,12 @@ export default function BottomSection() {
         </h2>
         <p className=" text-gray-600">
           Access a talent pool of qualified{" "}
-          <Link to="/">, digital marketing, coding, and multimedia experts in Abu Dhabi </Link>.{" "}
-          <br /> Match with the ideal professionals, freelance to full-time quickly.
+          <Link to="/">
+            , digital marketing, coding, and multimedia experts in Abu
+            Dhabi{" "}
+          </Link>
+          . <br /> Match with the ideal professionals, freelance to full-time
+          quickly.
         </p>
 
         <motion.div
@@ -82,16 +87,18 @@ export default function BottomSection() {
           transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
           className="mt-10 mb-5"
         >
-          <a
-            href="https://wa.me/971568145866?text=Hi%2C%20I'm%20looking%20for%20help%20with%20%5BSMM%20%2F%20SEO%20%2F%20Ads%20%2F%20Content%5D.%20Can%20you%20assist%3F"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative inline-flex items-center justify-center gap-3 px-6 py-3 text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105 overflow-hidden"
+          <button
+            onClick={() =>
+              handleChatClickCustom(
+                "Hi, I'm looking for help with [SMM / SEO / Ads / Content]. Can you assist?",
+              )
+            }
+            className="relative cursor-pointer inline-flex items-center justify-center gap-3 px-6 py-3 text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105 overflow-hidden"
           >
             <div className="absolute inset-0 bg-green-400  rounded-full opacity-0 hover:opacity-50 transition-opacity duration-300 transform scale-0 hover:scale-150 origin-center"></div>
             {/* <FaWhatsapp className="text-lg z-10" /> */}
             <span className="z-10">Start Hiring with Our Help</span>
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { ChevronLeft, ChevronRight, MapPin, MessageCircle } from "lucide-react";
+import { handleChatClickCustom } from "../../utils/whatsapp";
 
 const codingCandidates = [
   {
@@ -17,7 +18,8 @@ const codingCandidates = [
       "Github",
       "AWS",
     ],
-    description: "Builds scalable web applications using Python for both front-end and back-end",
+    description:
+      "Builds scalable web applications using Python for both front-end and back-end",
     photo: "/photos/coding/Sanjaydas-Photo.webp",
     alt: "Sanjaydas P S - Python Full Stack Developer Photo | Coding experts in abu dhabi",
     resume: "/resumes/coding/Sanjaydas-P-S-resume.pdf",
@@ -37,7 +39,8 @@ const codingCandidates = [
       "Github",
       "AWS",
     ],
-    description: "Creates full-stack applications with Python,user and server-side performance",
+    description:
+      "Creates full-stack applications with Python,user and server-side performance",
     photo: "/photos/coding/Jalaludheen-C-Photo.webp",
     alt: "Jalaludheen C Photo | website developer in abudhabi",
     resume: "/resumes/coding/Jalaludheen-C-resume.pdf",
@@ -82,17 +85,16 @@ export default function CodingCandidates() {
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + candidates.length) % candidates.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + candidates.length) % candidates.length,
+    );
   };
 
   const selectCandidate = (candidate) => {
-    setSelectedCandidate(selectedCandidate?.id === candidate.id ? null : candidate);
-  };
-
-  const whatsappMessage = (name) =>
-    encodeURIComponent(
-      `Hi! I'm interested in hiring ${name} for a Coding position. Can we discuss further?`
+    setSelectedCandidate(
+      selectedCandidate?.id === candidate.id ? null : candidate,
     );
+  };
 
   return (
     <section className="py-8 sm:py-12 lg:py-16 bg-white lg:min-h-screen">
@@ -131,13 +133,19 @@ export default function CodingCandidates() {
           <div className="overflow-hidden rounded-2xl">
             <div
               className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * (100 / cardsPerPage)}%)` }}
+              style={{
+                transform: `translateX(-${currentIndex * (100 / cardsPerPage)}%)`,
+              }}
             >
               {candidates.map((candidate) => (
                 <div
                   key={candidate.id}
                   className={`flex-shrink-0 px-2 sm:px-3 mb-6 ${
-                    cardsPerPage === 1 ? "w-full" : cardsPerPage === 2 ? "w-1/2" : "w-1/3"
+                    cardsPerPage === 1
+                      ? "w-full"
+                      : cardsPerPage === 2
+                        ? "w-1/2"
+                        : "w-1/3"
                   }`}
                 >
                   <div className="bg-white rounded-2xl shadow-lg border border-gray-200 h-auto flex flex-col overflow-hidden">
@@ -165,7 +173,9 @@ export default function CodingCandidates() {
                             {candidate.location} • {candidate.experience}
                           </span>
                         </div> */}
-                        <p className="text-gray-600 text-xs sm:text-sm">{candidate.description}</p>
+                        <p className="text-gray-600 text-xs sm:text-sm">
+                          {candidate.description}
+                        </p>
 
                         {/* Skills */}
                         <h4 className="text-xs font-semibold text-gray-700 mb-2">
@@ -202,17 +212,17 @@ export default function CodingCandidates() {
 
                         {selectedCandidate?.id === candidate.id && (
                           <>
-                            <a
-                              href={`https://wa.me/971501234567?text=${whatsappMessage(
-                                candidate.name
-                              )}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
+                            <button
+                              onClick={() =>
+                                handleChatClickCustom(
+                                  `Hi! I'm interested in hiring ${candidate.name} for a Coding position. Can we discuss further?`,
+                                )
+                              }
                               className="inline-flex items-center justify-center gap-2 w-full py-2.5 sm:py-3 bg-green-500 text-white rounded-full font-semibold text-sm hover:bg-green-600 transition-all duration-300 shadow-lg"
                             >
                               <MessageCircle className="w-4 h-4" />
                               Hire Now
-                            </a>
+                            </button>
 
                             <a
                               href={candidate.resume}
