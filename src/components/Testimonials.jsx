@@ -236,8 +236,10 @@ export default function Testimonials() {
   ];
 
   return (
-    <div className="bg-[#F9FAFB] py-16 px-6 lg:px-20">
-      <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">What Our Clients Say</h3>
+    <section className="bg-[#F9FAFB] py-16 px-6 lg:px-20" id="testimonials">
+      <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">
+        What Our Clients Say
+      </h3>
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
         {reviews.map((review, index) => (
@@ -245,7 +247,9 @@ export default function Testimonials() {
             key={index}
             className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
           >
-            <h4 className="text-lg font-semibold text-gray-800 mb-2">“{review.title}”</h4>
+            <h4 className="text-lg font-semibold text-gray-800 mb-2">
+              “{review.title}”
+            </h4>
             <p className="text-gray-600 text-sm mb-4">{review.comment}</p>
             <div className="flex items-center gap-4">
               {/* <img
@@ -254,13 +258,15 @@ export default function Testimonials() {
                 className="w-12 h-12 rounded-full object-cover"
               /> */}
               <div>
-                <p className="font-medium text-gray-900 text-sm">{review.name}</p>
+                <p className="font-medium text-gray-900 text-sm">
+                  {review.name}
+                </p>
                 <p className="text-xs text-gray-500">{review.company}</p>
               </div>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

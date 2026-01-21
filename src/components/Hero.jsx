@@ -4,7 +4,10 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen flex items-center overflow-hidden py-16">
+    <section
+      id="home"
+      className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen flex items-center overflow-hidden py-16"
+    >
       {/* Background elements */}
       {/* <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-20 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-green-500 rounded-full filter blur-3xl opacity-10"></div>
@@ -32,9 +35,9 @@ export default function Hero() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
-            From scalable code to converting campaigns and visuals that engage, We select the best
-            who transform your idea into actionable success. Build better, go faster, with trusted
-            experts .
+            From scalable code to converting campaigns and visuals that engage,
+            We select the best who transform your idea into actionable success.
+            Build better, go faster, with trusted experts .
           </p>
 
           <div className="flex justify-center lg:justify-start">

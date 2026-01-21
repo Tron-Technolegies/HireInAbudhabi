@@ -1,5 +1,13 @@
 import React from "react";
-import { Coffee, Home, ShoppingBag, Activity, Zap, Music, BookOpen } from "lucide-react";
+import {
+  Coffee,
+  Home,
+  ShoppingBag,
+  Activity,
+  Zap,
+  Music,
+  BookOpen,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 const industryIcons = [
@@ -34,7 +42,10 @@ const colors = [
 
 export default function Industries() {
   return (
-    <section className="py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900">
+    <section
+      className="py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900"
+      id="industries"
+    >
       <div className="max-w-7xl mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -50,7 +61,8 @@ export default function Industries() {
             </span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto ">
-            Connecting businesses with top marketing talent across key industries in Abu Dhabi.
+            Connecting businesses with top marketing talent across key
+            industries in Abu Dhabi.
           </p>
         </motion.div>
 
@@ -68,9 +80,12 @@ export default function Industries() {
                 >
                   {industryIcons[id]}
                 </div>
-                <h3 className="text-white text-center text-lg font-semibold mb-2">{industry}</h3>
+                <h3 className="text-white text-center text-lg font-semibold mb-2">
+                  {industry}
+                </h3>
                 <p className="text-gray-400 text-sm text-center leading-relaxed">
-                  Expert marketing solutions tailored for {industry.toLowerCase()}.
+                  Expert marketing solutions tailored for{" "}
+                  {industry.toLowerCase()}.
                 </p>
               </div>
             ))}
@@ -86,9 +101,12 @@ export default function Industries() {
                 >
                   {industryIcons[id]}
                 </div>
-                <h3 className="text-white text-center text-lg font-semibold mb-2">{industry}</h3>
+                <h3 className="text-white text-center text-lg font-semibold mb-2">
+                  {industry}
+                </h3>
                 <p className="text-gray-400 text-sm text-center leading-relaxed">
-                  Expert marketing solutions tailored for {industry.toLowerCase()}.
+                  Expert marketing solutions tailored for{" "}
+                  {industry.toLowerCase()}.
                 </p>
               </div>
             ))}
