@@ -25,9 +25,12 @@ export default function App() {
       children: [
         { index: true, element: <Home /> },
         { path: "/how-it-works", element: <HowItWorks /> },
-        { path: "/Digitalmarketing", element: <DigitalMarketingPage /> },
-        { path: "/Coding", element: <CodingPage /> },
-        { path: "/Multimedia", element: <MultimediaPage /> },
+        {
+          path: "/services/digitalmarketing",
+          element: <DigitalMarketingPage />,
+        },
+        { path: "/services/coding", element: <CodingPage /> },
+        { path: "/services/multimedia", element: <MultimediaPage /> },
         { path: "/AboutUs", element: <AboutUs /> },
         { path: "/terms-and-conditions", element: <TermsConditions /> },
         { path: "/privacy-policy", element: <PrivacyPolicy /> },

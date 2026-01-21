@@ -86,13 +86,15 @@ export default function BrandLogos() {
   ];
 
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="py-16 bg-white overflow-hidden" id="brandlogos">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Partner with Industry Leading Experts
           </h2>
-          <p className="text-lg text-gray-600 ">Trusted By Startups & Agencies in the UAE</p>
+          <p className="text-lg text-gray-600 ">
+            Trusted By Startups & Agencies in the UAE
+          </p>
         </div>
 
         {/* Top row - moving left */}
@@ -104,7 +106,11 @@ export default function BrandLogos() {
                 key={`top-1-${index}`}
                 className="flex-shrink-0 mx-8 w-32 h-20 bg-white rounded-lg shadow-lg flex items-center justify-center hover:scale-105 transition-transform duration-300"
               >
-                <img src={logo.img} alt={logo.alt} className="w-24 h-16 object-contain" />
+                <img
+                  src={logo.img}
+                  alt={logo.alt}
+                  className="w-24 h-16 object-contain"
+                />
               </div>
             ))}
             {/* Duplicate set for seamless loop */}
@@ -113,7 +119,11 @@ export default function BrandLogos() {
                 key={`top-2-${index}`}
                 className="flex-shrink-0 mx-8 w-32 h-20 bg-white rounded-lg shadow-lg flex items-center justify-center hover:scale-105 transition-transform duration-300"
               >
-                <img src={logo.img} alt={logo.alt} className="w-24 h-16 object-contain" />
+                <img
+                  src={logo.img}
+                  alt={logo.alt}
+                  className="w-24 h-16 object-contain"
+                />
               </div>
             ))}
           </div>
@@ -128,7 +138,11 @@ export default function BrandLogos() {
                 key={`bottom-1-${index}`}
                 className="flex-shrink-0 mx-8 w-32 h-20 bg-white rounded-lg shadow-lg flex items-center justify-center hover:scale-105 transition-transform duration-300"
               >
-                <img src={logo.img} alt={logo.alt} className="w-24 h-16 object-contain" />
+                <img
+                  src={logo.img}
+                  alt={logo.alt}
+                  className="w-24 h-16 object-contain"
+                />
               </div>
             ))}
             {/* Duplicate set for seamless loop */}
@@ -137,7 +151,11 @@ export default function BrandLogos() {
                 key={`bottom-2-${index}`}
                 className="flex-shrink-0 mx-8 w-32 h-20 bg-white rounded-lg shadow-lg flex items-center justify-center hover:scale-105 transition-transform duration-300"
               >
-                <img src={logo.img} alt={logo.alt} className="w-24 h-16 object-contain" />
+                <img
+                  src={logo.img}
+                  alt={logo.alt}
+                  className="w-24 h-16 object-contain"
+                />
               </div>
             ))}
           </div>

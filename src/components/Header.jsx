@@ -14,7 +14,7 @@ export default function Header() {
     { name: "About Us", path: "/AboutUs" },
   ];
 
-  const services = ["Digitalmarketing", "Coding", "Multimedia"];
+  const services = ["digitalmarketing", "coding", "multimedia"];
 
   useEffect(() => {
     const handleResize = () => {
@@ -74,15 +74,17 @@ export default function Header() {
                   {services.map((service) => (
                     <Link
                       key={service}
-                      to={`/${service}`}
+                      to={`/services/${service}`}
                       className={`block px-4 py-2 hover:bg-gray-100 ${
-                        location.pathname === `/${service}`
+                        location.pathname === `/services/${service}`
                           ? "text-green-600 font-semibold"
                           : "text-gray-700"
                       }`}
                       onClick={() => setServicesOpen(false)}
                     >
-                      {service === "Digitalmarketing" ? "Digital Marketing" : service}
+                      {service === "digitalmarketing"
+                        ? "Digital Marketing"
+                        : service}
                     </Link>
                   ))}
                 </div>
@@ -101,7 +103,7 @@ export default function Header() {
                     setServicesOpen(false);
                   }}
                   className={`${linkStyle(
-                    path
+                    path,
                   )} hover:text-green-600 transition duration-300 text-lg`}
                 >
                   {name}
@@ -136,7 +138,9 @@ export default function Header() {
         <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
           <div className="relative max-w-xs w-11/12 sm:max-w-sm bg-white/90 backdrop-blur-md rounded-xl shadow-2xl p-6">
             <div className="flex justify-between items-center mb-6">
-              <span className="text-2xl font-extrabold text-green-600 tracking-wide">Menu</span>
+              <span className="text-2xl font-extrabold text-green-600 tracking-wide">
+                Menu
+              </span>
               <button
                 onClick={() => setMenuOpen(false)}
                 className="text-gray-700 rounded-full p-1 hover:bg-green-100 transition"
@@ -153,7 +157,9 @@ export default function Header() {
                   to="/"
                   onClick={() => setMenuOpen(false)}
                   className={`block text-center font-semibold text-lg rounded-md px-4 py-2 hover:bg-green-100 ${
-                    location.pathname === "/" ? "bg-green-100 text-green-600" : ""
+                    location.pathname === "/"
+                      ? "bg-green-100 text-green-600"
+                      : ""
                   }`}
                 >
                   Home
@@ -169,15 +175,17 @@ export default function Header() {
                   {services.map((service) => (
                     <Link
                       key={service}
-                      to={`/${service}`}
+                      to={`/services/${service}`}
                       onClick={() => setMenuOpen(false)}
                       className={`w-full text-center block px-3 py-1 rounded-md text-base hover:bg-green-100 ${
-                        location.pathname === `/${service}`
+                        location.pathname === `/services/${service}`
                           ? "bg-green-100 text-green-600"
                           : "text-gray-700"
                       }`}
                     >
-                      {service === "Digitalmarketing" ? "Digital Marketing" : service}
+                      {service === "digitalmarketing"
+                        ? "Digital Marketing"
+                        : service}
                     </Link>
                   ))}
                 </div>
@@ -192,7 +200,9 @@ export default function Header() {
                       to={path}
                       onClick={() => setMenuOpen(false)}
                       className={`block text-center font-semibold text-lg rounded-md px-4 py-2 hover:bg-green-100 ${
-                        location.pathname === path ? "bg-green-100 text-green-600" : ""
+                        location.pathname === path
+                          ? "bg-green-100 text-green-600"
+                          : ""
                       }`}
                     >
                       {name}

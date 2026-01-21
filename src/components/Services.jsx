@@ -212,27 +212,27 @@ const services = [
     description:
       "SEO Specialists, Google Ads Experts, Performance Marketers, Social Media Managers, Content Marketers, and more.",
     icon: <Search className="w-8 h-8 text-green-600" />,
-    link: "/Digitalmarketing", // ✅ route
+    link: "/services/digitalmarketing", // ✅ route
   },
   {
     category: "Coding",
     description:
       "Front-end Developers, Back-end Developers, Mobile App Developers, Web App Developers, UI/UX Developers, and more.",
     icon: <Code className="w-8 h-8 text-green-600" />,
-    link: "/Coding", // ✅ route
+    link: "/services/coding", // ✅ route
   },
   {
     category: "Multimedia",
     description:
       "Video Editors, Motion Graphics Artists, Content Creators, Animators, 3D Designers, Visual Storytellers, and more.",
     icon: <Video className="w-8 h-8 text-green-600" />,
-    link: "/Multimedia", // ✅ route
+    link: "/services/multimedia", // ✅ route
   },
 ];
 
 export default function Services() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" id="services">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -252,8 +252,8 @@ export default function Services() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="text-gray-600 max-w-2xl mx-auto mb-12"
         >
-          Hire skilled professionals in Digital Marketing, Coding, and Multimedia customized to help
-          you reach your business goals.
+          Hire skilled professionals in Digital Marketing, Coding, and
+          Multimedia customized to help you reach your business goals.
         </motion.p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -267,8 +267,12 @@ export default function Services() {
                 transition={{ delay: index * 0.1 }}
                 className="rounded-xl border border-gray-200 p-8 flex flex-col items-center text-center hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
               >
-                <div className="mb-5 p-4 rounded-full bg-green-50">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.category}</h3>
+                <div className="mb-5 p-4 rounded-full bg-green-50">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {service.category}
+                </h3>
                 <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
                   {service.description}
                 </p>
