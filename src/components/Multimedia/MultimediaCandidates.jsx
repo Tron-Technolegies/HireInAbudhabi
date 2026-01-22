@@ -1,12 +1,20 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { ChevronLeft, ChevronRight, MapPin, MessageCircle } from "lucide-react";
+import { handleChatClickCustom } from "../../utils/whatsapp";
 
 const multimediaCandidates = [
   {
     id: 1,
     name: "Sabari Vinod",
     position: "Media professional and Filmmaker",
-    skills: ["Photoshop", "Premiere Pro", "After Effects", "Davinci", "Lightroom", "Ableton"],
+    skills: [
+      "Photoshop",
+      "Premiere Pro",
+      "After Effects",
+      "Davinci",
+      "Lightroom",
+      "Ableton",
+    ],
     description:
       "Focused on filmmaking and storytelling, with 4+ years of hands on media industry experience.",
     photo: "/photos/multimedia/Sabari-Vinod-Photo.webp",
@@ -51,7 +59,7 @@ export default function MultimediaCandidates() {
         id: index,
         ...candidate,
       })),
-    []
+    [],
   );
 
   // Responsive cards per page
@@ -75,18 +83,18 @@ export default function MultimediaCandidates() {
     return () => clearInterval(interval);
   }, [candidates.length, isHovered]);
 
-  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % candidates.length);
+  const nextSlide = () =>
+    setCurrentIndex((prev) => (prev + 1) % candidates.length);
   const prevSlide = () =>
-    setCurrentIndex((prev) => (prev - 1 + candidates.length) % candidates.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + candidates.length) % candidates.length,
+    );
 
   const selectCandidate = (candidate) => {
-    setSelectedCandidate(selectedCandidate?.id === candidate.id ? null : candidate);
-  };
-
-  const whatsappMessage = (name) =>
-    encodeURIComponent(
-      `Hi! I'm interested in hiring ${name} for a Multimedia position. Can we discuss further?`
+    setSelectedCandidate(
+      selectedCandidate?.id === candidate.id ? null : candidate,
     );
+  };
 
   return (
     <section className="py-8 sm:py-12 lg:py-16 bg-white lg:min-h-screen">
@@ -125,13 +133,19 @@ export default function MultimediaCandidates() {
           <div className="overflow-hidden rounded-2xl">
             <div
               className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * (100 / cardsPerPage)}%)` }}
+              style={{
+                transform: `translateX(-${currentIndex * (100 / cardsPerPage)}%)`,
+              }}
             >
               {candidates.map((candidate) => (
                 <div
                   key={candidate.id}
                   className={`flex-shrink-0 px-2 sm:px-3 mb-6 ${
-                    cardsPerPage === 1 ? "w-full" : cardsPerPage === 2 ? "w-1/2" : "w-1/3"
+                    cardsPerPage === 1
+                      ? "w-full"
+                      : cardsPerPage === 2
+                        ? "w-1/2"
+                        : "w-1/3"
                   }`}
                 >
                   <div className="bg-white rounded-2xl shadow-lg border border-gray-200 h-auto flex flex-col overflow-hidden">
@@ -161,7 +175,9 @@ export default function MultimediaCandidates() {
                             </span>
                           </div>
                         )} */}
-                        <p className="text-gray-600 text-xs sm:text-sm">{candidate.description}</p>
+                        <p className="text-gray-600 text-xs sm:text-sm">
+                          {candidate.description}
+                        </p>
 
                         {/* Skills */}
                         <h4 className="text-xs font-semibold text-gray-700 mb-2">
@@ -198,17 +214,17 @@ export default function MultimediaCandidates() {
 
                         {selectedCandidate?.id === candidate.id && (
                           <>
-                            <a
-                              href={`https://wa.me/971568145866?text=${whatsappMessage(
-                                candidate.name
-                              )}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
+                            <button
+                              onClick={() =>
+                                handleChatClickCustom(
+                                  `Hi! I'm interested in hiring ${candidate.name} for a Multimedia position. Can we discuss further?`,
+                                )
+                              }
                               className="inline-flex items-center justify-center gap-2 w-full py-2.5 sm:py-3 bg-green-500 text-white rounded-full font-semibold text-sm hover:bg-green-600 transition-all duration-300 shadow-lg"
                             >
                               <MessageCircle className="w-4 h-4" />
                               Hire Now
-                            </a>
+                            </button>
 
                             <a
                               href={candidate.resume}

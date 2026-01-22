@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import {
+  MdOutlineKeyboardArrowRight,
+  MdOutlineKeyboardArrowLeft,
+} from "react-icons/md";
 import tikkatonight from "../../assets/logos/TikkaTonight.webp";
 import lebanesemill from "../../assets/logos/LebaneseMill.webp";
+import { handleChatClickCustom } from "../../utils/whatsapp";
 
 export default function MultimediaReview() {
   const [currentReview, setCurrentReview] = useState(0);
@@ -53,11 +57,18 @@ export default function MultimediaReview() {
               </h3>
 
               <p className="text-base sm:text-xl text-black leading-relaxed">
-                From video editing to motion design, our multimedia freelancers and full-time pros
-                are reshaping content in the UAE.
+                From video editing to motion design, our multimedia freelancers
+                and full-time pros are reshaping content in the UAE.
               </p>
 
-              <button className="bg-black text-white px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-full font-bold hover:bg-gray-800 transition-colors duration-300">
+              <button
+                onClick={() =>
+                  handleChatClickCustom(
+                    "Hello, I'm interested in your Multimedia services.",
+                  )
+                }
+                className="bg-black text-white px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-full font-bold hover:bg-gray-800 transition-colors duration-300"
+              >
                 Browse Multimedia Talent
               </button>
             </div>

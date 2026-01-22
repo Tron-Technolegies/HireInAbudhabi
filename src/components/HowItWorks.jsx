@@ -124,6 +124,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
+import { handleChatClickCustom } from "../utils/whatsapp";
 
 export default function HowItWorks() {
   const steps = [
@@ -131,9 +132,10 @@ export default function HowItWorks() {
       title: "Tell Us What You Need",
       description: (
         <>
-          Fill out a simple request form or explore our categories. Tell us your needs whether
-          you're looking to hire an Abu Dhabi website developer, a Dubai social media manager, or a
-          freelance graphic designer on a one-off project.
+          Fill out a simple request form or explore our categories. Tell us your
+          needs whether you're looking to hire an Abu Dhabi website developer, a
+          Dubai social media manager, or a freelance graphic designer on a
+          one-off project.
           <br />
           <br />
           <strong>Select by skill, deadline, budget, and job type:</strong>
@@ -147,16 +149,18 @@ export default function HowItWorks() {
       title: "We Match You With Vetted Experts",
       description: (
         <>
-          Our team will shortlist top candidates from our pre-screened network of professionals in:
+          Our team will shortlist top candidates from our pre-screened network
+          of professionals in:
           <br />
           <br />
           <ul className="list-disc list-inside space-y-2">
             <li>
-              <strong>Digital Marketing:</strong> SEO, performance marketing, content creators,
-              social media, Google Ads experts
+              <strong>Digital Marketing:</strong> SEO, performance marketing,
+              content creators, social media, Google Ads experts
             </li>
             <li>
-              <strong>Coding:</strong> Full-stack developers, web designers, backend engineers
+              <strong>Coding:</strong> Full-stack developers, web designers,
+              backend engineers
             </li>
             <li>
               <strong>Multimedia:</strong> Video editors, graphic designers
@@ -169,8 +173,8 @@ export default function HowItWorks() {
       title: "You Interview & Hire",
       description: (
         <>
-          You'll receive candidate profiles within 24–48 hours. You interview them in person and
-          select the best for your project or position.
+          You'll receive candidate profiles within 24–48 hours. You interview
+          them in person and select the best for your project or position.
           <br />
           <br />
           <ul className="list-disc list-inside space-y-1">
@@ -191,9 +195,9 @@ export default function HowItWorks() {
       title: "Launch Your Work With Full Support",
       description: (
         <>
-          Your project starts working as soon as you hire. Need assistance monitoring progress? Our
-          add-on monitoring service provides you with visibility and accountability for part-time
-          and freelance workers.
+          Your project starts working as soon as you hire. Need assistance
+          monitoring progress? Our add-on monitoring service provides you with
+          visibility and accountability for part-time and freelance workers.
           <br />
           <br />
           <ul className="list-disc list-inside space-y-1">
@@ -270,13 +274,21 @@ export default function HowItWorks() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-8 relative"
         >
           {steps.map((step, index) => (
-            <motion.div key={index} variants={itemVariants} className="relative z-10 group">
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="relative z-10 group"
+            >
               <div className="h-full bg-gray-800 bg-opacity-70 backdrop-blur-sm p-8 rounded-xl shadow-xl border border-gray-700 group-hover:border-green-400 transition-all duration-300 hover:-translate-y-3">
                 <div className="absolute -top-3 left-6 px-3 py-1 text-xs font-bold text-white bg-gray-700 rounded-full">
                   Step {index + 1}
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 mt-6">{step.title}</h3>
-                <div className="text-gray-400 leading-relaxed text-left">{step.description}</div>
+                <h3 className="text-2xl font-bold text-white mb-4 mt-6">
+                  {step.title}
+                </h3>
+                <div className="text-gray-400 leading-relaxed text-left">
+                  {step.description}
+                </div>
               </div>
             </motion.div>
           ))}
@@ -294,16 +306,18 @@ export default function HowItWorks() {
           transition={{ delay: 1.5, duration: 0.8, ease: "easeOut" }}
           className="mt-14"
         >
-          <a
-            href="https://wa.me/971568145866?text=Hi%2C%20I'm%20looking%20for%20help%20with%20%5BSMM%20%2F%20SEO%20%2F%20Ads%20%2F%20Content%5D.%20Can%20you%20assist%3F"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() =>
+              handleChatClickCustom(
+                "Hi, I'm looking for help with [SMM / SEO / Ads / Content]. Can you assist?",
+              )
+            }
             className="relative inline-flex items-center justify-center gap-3 px-6 py-3 text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105 overflow-hidden"
           >
             <div className="absolute inset-0 bg-green-400 rounded-full opacity-0 hover:opacity-50 transition-opacity duration-300 transform scale-0 hover:scale-150 origin-center"></div>
             {/* <FaWhatsapp className="text-lg z-10" /> */}
             <span className="z-10">Start Hiring with Our Help</span>
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>

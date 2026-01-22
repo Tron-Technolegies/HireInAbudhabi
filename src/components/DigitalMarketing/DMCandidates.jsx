@@ -1,13 +1,21 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { ChevronLeft, ChevronRight, MapPin, MessageCircle } from "lucide-react";
+import { handleChatClickCustom } from "../../utils/whatsapp";
 
 const dmCandidates = [
   {
     id: 1,
     name: "Muhammed Hashim",
     position: "SEO Specialist",
-    skills: ["SEO", "Wordpress", "Social Media", "Performance Marketing", "Content writing"],
-    description: "Optimizes websites to improve visibility, rankings, and organic traffic.",
+    skills: [
+      "SEO",
+      "Wordpress",
+      "Social Media",
+      "Performance Marketing",
+      "Content writing",
+    ],
+    description:
+      "Optimizes websites to improve visibility, rankings, and organic traffic.",
     photo: "/photos/digital-marketing/Muhammed-Hashim-Photo.webp",
     alt: "Muhammed Hashim - SEO Specialist in Abu Dhabi",
     resume: "/resumes/digital-marketing/Muhammed-Hashim-Resume.pdf",
@@ -16,8 +24,15 @@ const dmCandidates = [
     id: 2,
     name: "Muhammed Shameer",
     position: "Social Media Marketer",
-    skills: ["Wordpress", "SEO", "Performance Marketing", "Social Media", "TikTok Ads"],
-    description: "Builds brand awareness and audience engagement across social platforms.",
+    skills: [
+      "Wordpress",
+      "SEO",
+      "Performance Marketing",
+      "Social Media",
+      "TikTok Ads",
+    ],
+    description:
+      "Builds brand awareness and audience engagement across social platforms.",
     photo: "/photos/digital-marketing/Muhammed-Shameer-Photo.webp",
     alt: "Muhammed Shameer - Social Media Manager in Dubai",
     resume: "/resumes/digital-marketing/Muhammed-Shameer-Resume.pdf",
@@ -27,7 +42,8 @@ const dmCandidates = [
     name: "Dheeraj M R",
     position: "Digital Marketing Executive",
     skills: ["Google Ads", "Meta Ads", "Canva", "SEO", "Social Media"],
-    description: "Coordinates marketing initiatives that lead impactful business results.",
+    description:
+      "Coordinates marketing initiatives that lead impactful business results.",
     photo: "/photos/digital-marketing/Dheeraj-M-R-Photo.webp",
     alt: "Dheeraj M R - Digital Marketing expert in Abu Dhabi",
     resume: "/resumes/digital-marketing/Dheeraj-M-R-Resume.pdf",
@@ -37,7 +53,8 @@ const dmCandidates = [
     name: "Riyas Abubacker",
     position: "Digital Marketing Specialist",
     skills: ["Google Ads", "Meta Ads", "SEO", "Wordpress", "Canva"],
-    description: "Develops integrated strategies to strengthen online presence and engagement",
+    description:
+      "Develops integrated strategies to strengthen online presence and engagement",
     photo: "/photos/digital-marketing/Riyas-Abubacker-Photo.webp",
     alt: "Riyas Abubacker - Digital Marketing expert in Abudhabi",
     resume: "/resumes/digital-marketing/Riyas-Abubacker-Resume.pdf",
@@ -46,8 +63,15 @@ const dmCandidates = [
     id: 5,
     name: "Shinas AR",
     position: "Performance Marketer",
-    skills: ["SEO", "Performance Marketing", "Content writing", "Wordpress", "Social Media"],
-    description: "Focused on scaling campaigns that achieve both reach and revenue.",
+    skills: [
+      "SEO",
+      "Performance Marketing",
+      "Content writing",
+      "Wordpress",
+      "Social Media",
+    ],
+    description:
+      "Focused on scaling campaigns that achieve both reach and revenue.",
     photo: "/photos/digital-marketing/Shinas-AR-Photo.webp",
     alt: "Shinas AR - Performance marketing expert in abudhabi",
     resume: "/resumes/digital-marketing/Shinas-AR-Resume.pdf",
@@ -108,18 +132,16 @@ export default function DMCandidates() {
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + candidates.length) % candidates.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + candidates.length) % candidates.length,
+    );
   };
 
   const selectCandidate = (candidate) => {
-    setSelectedCandidate(selectedCandidate?.id === candidate.id ? null : candidate);
-  };
-
-  // Adjusted WhatsApp message for DM candidates
-  const whatsappMessage = (name) =>
-    encodeURIComponent(
-      `Hi! I'm interested in hiring ${name} for a Digital Marketing position. Can we discuss further?`
+    setSelectedCandidate(
+      selectedCandidate?.id === candidate.id ? null : candidate,
     );
+  };
 
   return (
     <section className="py-8 sm:py-12 lg:py-16 bg-white lg:min-h-screen">
@@ -159,13 +181,19 @@ export default function DMCandidates() {
           <div className="overflow-hidden rounded-2xl">
             <div
               className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * (100 / cardsPerPage)}%)` }}
+              style={{
+                transform: `translateX(-${currentIndex * (100 / cardsPerPage)}%)`,
+              }}
             >
               {dmCandidates.map((candidate) => (
                 <div
                   key={candidate.id}
                   className={`flex-shrink-0  px-2 sm:px-3 mb-6 sm:mb-6 ${
-                    cardsPerPage === 1 ? "w-full" : cardsPerPage === 2 ? "w-1/2" : "w-1/3"
+                    cardsPerPage === 1
+                      ? "w-full"
+                      : cardsPerPage === 2
+                        ? "w-1/2"
+                        : "w-1/3"
                   }`}
                 >
                   <div className="bg-white rounded-2xl shadow-lg border border-gray-200 h-auto flex flex-col overflow-hidden">
@@ -239,17 +267,17 @@ export default function DMCandidates() {
                           {selectedCandidate?.id === candidate.id && (
                             <>
                               {/* WhatsApp Hire Button */}
-                              <a
-                                href={`https://wa.me/971568145866?text=${whatsappMessage(
-                                  candidate.name
-                                )}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                              <button
+                                onClick={() =>
+                                  handleChatClickCustom(
+                                    `Hi! I'm interested in hiring ${candidate.name} for a Digital Marketing position. Can we discuss further?`,
+                                  )
+                                }
                                 className="inline-flex items-center justify-center gap-2 w-full py-2.5 sm:py-3 bg-green-500 text-white rounded-full font-semibold text-sm hover:bg-green-600 transition-all duration-300 shadow-lg animate-in slide-in-from-bottom-2 duration-200"
                               >
                                 <MessageCircle className="w-4 h-4" />
                                 Hire Now
-                              </a>
+                              </button>
 
                               {/* Download Resume Button */}
                               <a

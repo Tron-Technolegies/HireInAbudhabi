@@ -1,6 +1,7 @@
 import React from "react";
 import AboutUsHeroImage from "../../assets/We-Are-Hiring-Hire-in-Abudhabi.webp";
 import { Link } from "react-router-dom";
+import { handleChatClick } from "../../utils/whatsapp";
 
 export default function AboutHero() {
   return (
@@ -22,26 +23,23 @@ export default function AboutHero() {
               </h1>
               <p className="text-base sm:text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl mx-auto lg:mx-0">
                 Hire In Abu Dhabi is a{" "}
-                <Link to="/">flexible talent sourcing platform in the UAE</Link>. We're here to
-                facilitate companies, startups, and solo entrepreneurs to connect with thoroughly
-                screened <Link to="/">digital marketing, coding, and multimedia experts</Link>
+                <Link to="/">flexible talent sourcing platform in the UAE</Link>
+                . We're here to facilitate companies, startups, and solo
+                entrepreneurs to connect with thoroughly screened{" "}
+                <Link to="/">
+                  digital marketing, coding, and multimedia experts
+                </Link>
                 . <br className="hidden sm:inline" />
-                We're not a conventional BPO. We provide more intelligent, flexible hiring
-                freelance, part-time, or full-time.
+                We're not a conventional BPO. We provide more intelligent,
+                flexible hiring freelance, part-time, or full-time.
               </p>
+
               <button
-                title="Contact-Now"
-                className="flex inline-flex justify-center lg:justify-start"
+                onClick={handleChatClick}
+                className="relative inline-flex items-center justify-center gap-3 px-6 py-3 text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105 overflow-hidden"
               >
-                <a
-                  href="https://wa.me/971568145866"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative inline-flex items-center justify-center gap-3 px-6 py-3 text-base font-semibold text-white bg-green-600 rounded-full transition-all duration-300 hover:bg-green-500 hover:scale-105 overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-green-400 rounded-full opacity-0 hover:opacity-50 transition-opacity duration-300 transform scale-0 hover:scale-150 origin-center"></div>
-                  <span className="z-10">Hire now</span>
-                </a>
+                <div className="absolute inset-0 bg-green-400 rounded-full opacity-0 hover:opacity-50 transition-opacity duration-300 transform scale-0 hover:scale-150 origin-center"></div>
+                <span className="z-10">Hire now</span>
               </button>
             </div>
 

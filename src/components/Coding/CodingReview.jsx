@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import {
+  MdOutlineKeyboardArrowRight,
+  MdOutlineKeyboardArrowLeft,
+} from "react-icons/md";
 import handcar from "../../assets/logos/Handcar.webp";
 import dahab from "../../assets/logos/DahabMiners.webp";
+import { handleChatClickCustom } from "../../utils/whatsapp";
 
 export default function CodingReview() {
   const [currentReview, setCurrentReview] = useState(0);
@@ -53,11 +57,18 @@ export default function CodingReview() {
               </h3>
 
               <p className="text-base sm:text-xl text-black leading-relaxed">
-                Whether it's backend optimization or modern frontend design, hear from companies
-                that hired top-tier developers in the UAE.
+                Whether it's backend optimization or modern frontend design,
+                hear from companies that hired top-tier developers in the UAE.
               </p>
 
-              <button className="bg-black text-white px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-full font-bold hover:bg-gray-800 transition-colors duration-300">
+              <button
+                onClick={() =>
+                  handleChatClickCustom(
+                    "Hello, I'm interested in your Coding services.",
+                  )
+                }
+                className="bg-black text-white px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-full font-bold hover:bg-gray-800 transition-colors duration-300"
+              >
                 Browse Developers
               </button>
             </div>
